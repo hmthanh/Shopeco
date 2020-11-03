@@ -1,0 +1,1222 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Layout_MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic page needs
+    ============================================ -->
+    <title>Sàn thương mai điện tử Shopeco</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicondsd
+    ============================================ -->
+    <link rel="shortcut icon" type="png" href="/Content/UI/image/catalog/logo.png" />
+    <!-- Libs CSS
+    ============================================ -->
+    <link href="/Content/UI/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--    <link href="/Content/UI/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="/Content/UI/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="/Content/UI/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/lib.css" rel="stylesheet">
+    <link href="/Content/UI/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="/Content/UI/js/minicolors/miniColors.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="/Content/UI/css/lazada.css" rel="stylesheet" />
+    <link href="/Content/UI/css/themecss/so_searchpro.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/so-categories.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/so-listing-tabs.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/so-category-slider.css" rel="stylesheet">
+    <link href="/Content/UI/css/themecss/so-newletter-popup.css" rel="stylesheet">
+
+    <link href="/Content/UI/css/footer/footer1.css" rel="stylesheet">
+    <link href="/Content/UI/css/theme.css" rel="stylesheet" id="color_scheme">
+    <link href="/Content/UI/css/css1.css" rel="stylesheet" />
+
+    <%--<link href="../Content/style.css" rel="stylesheet" />--%>
+    <%--<link href="../Admin/Content/style.css" rel="stylesheet" />--%>
+
+    <link href="/Content/UI/css/Style.css" rel="stylesheet" />
+    <%--<link href="../Content/admin/css/style.css" rel="stylesheet" />--%>
+    <link href="/Content/UI/css/cssShopeco.css" rel="stylesheet" />
+    <link href="../Content/UI/css/cssSendo.css" rel="stylesheet" />
+
+
+    <link href="../Content/UI/css/header/header1.css" rel="stylesheet" />
+    <link href="/Content/UI/css/home3.css" rel="stylesheet" />
+    <link href="/Content/UI/css/responsive.css" rel="stylesheet">
+    <link href="../HeaderStyle.css" rel="stylesheet">
+    <!-- Google web fonts
+    ============================================ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" type="text/css" media="screen" />
+    <%--<style type="text/css">
+         body{font-family:'Poppins', sans-serif;}
+    </style>--%>
+    <%--<script src="../Content/UI/js/jquery-3.3.1.js"></script>--%>
+    <script src="../Content/UI/js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            function DangKyEmail() {
+                // var TenHangHoa = $('#ContentPlaceHolder1_txtNhanEmail').val();
+                var T = $("#txtNhanEmail").val().trim();
+                var email = document.getElementById('txtNhanEmail');
+
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (!filter.test(email.value)) {
+                    alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+                    email.focus;
+                    return false;
+                }
+                else {
+                    var xmlhttp;
+                    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    }
+                    else {// code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange = function () {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            if (xmlhttp.responseText != "") {
+                                alert(xmlhttp.responseText);
+                                window.location.href = "/";
+                            }
+                            else {
+                                alert("Lỗi get tên nhân viên !")
+                            }
+                        }
+                    }
+                    xmlhttp.open("GET", "../Ajax.aspx?Action=DangKyNhanMail&Mail=" + T, true);
+                    xmlhttp.send();
+                }
+                //alert(T)
+
+            }
+            function LoadMenuCap2Mobile(a) {
+                var h = $(a).parent().children("ul").css("display");
+                if (h == "none")
+                    $(a).parent().children("ul").css("display", "block");
+                else
+                    $(a).parent().children("ul").css("display", "none");
+            }
+            function ThemGioHangadd(idSanPham, Gia) {
+                var SoLuong = $("#txtSoLuong").val();
+
+
+                var xmlhttp;
+                if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        if (xmlhttp.responseText == "True") {
+                            window.location.href = "/gio-hang";
+                        }
+                        else
+                            alert("Lỗi !")
+                    }
+                }
+                xmlhttp.open("GET", "../Ajax.aspx?Action=ThemGioHang&idSanPham=" + idSanPham + "&idMau=" + "1" + "&idSize=" + "1" + "&SoLuong=" + "1", true);
+                xmlhttp.send();
+            }
+        });
+    </script>
+    <script>
+        function TimKiem() {
+            var T = $("#text-product").val().trim();
+            $(location).attr('href', '../TimKiem.aspx?TenLoaiHangHoa=' + T)
+        }
+
+
+        function TK() {
+            $('#text-product').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    TimKiem();
+                }
+            });
+        }
+        function LoadMenuCap2Mobile(a) {
+            var h = $(a).parent().children("ul").css("display");
+            if (h == "none")
+                $(a).parent().children("ul").css("display", "block");
+            else
+                $(a).parent().children("ul").css("display", "none");
+        }
+        function ThemGioHangadd(idSanPham, Gia) {
+            // var idSanPham = $("#ContentPlaceHolder1_txtidSanPham").val();
+            // var idMau = $("#ContentPlaceHolder1_ulMau").children(".active").children("label").children("input").attr("value");
+
+
+            var SoLuong = $("#txtSoLuong").val();
+
+
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    if (xmlhttp.responseText == "True") {
+                        window.location.href = "/gio-hang";
+                    }
+                    else
+                        alert("Lỗi !")
+                }
+            }
+            xmlhttp.open("GET", "../Ajax.aspx?Action=ThemGioHang&idSanPham=" + idSanPham + "&idMau=" + "1" + "&idSize=" + "1" + "&SoLuong=" + "1", true);
+            xmlhttp.send();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="common-home res layout-1">
+
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+        <!-- Header Container  -->
+
+        <header id="header" class=" typeheader-3">
+
+            <!-- Header Top -->
+            <div class="header-top hidden-compact">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                            <div class="hidden-md hidden-sm hidden-xs welcome-msg"><%--Welcome to SuperMarket! Wrap new offers / gift every single day on Weekends - New Coupon code: <span>Happy2018</span>--%> </div>
+                            <%--<ul class="top-link list-inline hidden-lg ">
+                                <li class="account" id="my_account">
+                                    <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs">My Account </span><span class="fa fa-caret-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="register.html"><i class="fa fa-user"></i>Register</a></li>
+                                        <li><a href="login.html"><i class="fa fa-pencil-square-o"></i>Login</a></li>
+                                    </ul>
+                                </li>
+                            </ul>--%>
+                        </div>
+                        <div class="header-top-right collapsed-block col-lg-5 col-md-4 col-sm-6 col-xs-8">
+                            <ul class="top-link list-inline lang-curr">
+                                <%--<li class="language">
+                                    <div class="btn-group languages-block ">
+                                        <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-bullhorn"></i>
+                                            <span class="spanheader1">Rao vặt</span>
+                                        </a>
+                                    </div>
+                                </li>--%>
+                                <li class="currency">
+                                    <div class="btn-group currencies-block">
+                                        <a href="<%=GetRouteUrl("gianhang_dashboard",new { }) %>" target="_blank" class="btn btn-link dropdown-toggle">
+                                            <i class="fa fa-user"></i>
+                                            <span class="spanheader1">Kênh người bán</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <%--<li class="language">
+                                    <div class="btn-group languages-block ">
+                                            <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-bell-o"></i>
+                                                <span class="spanheader1">Thông báo</span>
+                                            </a>
+                                    </div>
+                                </li>--%>
+                                <li runat="server" class="account" id="my_account" style="display: none">
+                                    <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"><span class="hidden-xs">Tài khoản </span><span class="fa fa-caret-down"></span>
+                                    </a>
+
+                                    <%--<ul id="AccountControl" runat="server" class="dropdown-menu "><li><a href="/register"><i class="fa fa-user"></i> Đăng ký</a></li><li><a href="/login"><i class="fa fa-pencil-square-o"></i> Đăng nhập</a></li></ul>--%>
+                                </li>
+                                <li class="language">
+                                    <div class="btn-group languages-block ">
+                                        <a class="btn btn-link dropdown-toggle" href="tel:0963537537" data-toggle="dropdown">
+                                            <i class="fa fa-phone"></i>
+                                            <span class="spanheader1">0963.537.537</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Header Top -->
+
+            <!-- Header center -->
+            <div class="header-middle">
+                <div class="container">
+                    <div class="row parent">
+                        <!-- Logo -->
+                        <div class="child navbar-logo col-lg-2 col-md-2 col-sm-4 col-xs-12">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="/Content/UI/image/catalog/logo.png" title="Your Store" alt="Your Store" /></a>
+                            </div>
+                        </div>
+                        <!-- //end Logo -->
+
+                        <!-- Search -->
+                        <div class="child col-lg-4">
+                            <div class="search-header-w">
+                                <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+
+                                <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
+                                    <form method="GET" action="/search">
+                                        <div id="search0" class="search input-group form-group">
+                                            <div hidden="hidden" style="display: none" class="select_category filter_type  icon-select hidden-sm hidden-xs">
+                                                <%--<select class="no-border" name="category_id" id="slLoaiSanPham" runat="server">
+                                                    <option value="0">Sản phẩm</option>
+                                                    <option value="78">Apparel</option>
+                                                    <option value="77">Cables &amp; Connectors</option>
+                                                    <option value="82">Cameras &amp; Photo</option>
+                                                    <option value="80">Flashlights &amp; Lamps</option>
+                                                    <option value="81">Mobile Accessories</option>
+                                                    <option value="79">Video Games</option>
+                                                    <option value="20">Jewelry &amp; Watches</option>
+                                                    <option value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earings</option>
+                                                    <option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wedding Rings</option>
+                                                    <option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Men Watches</option>
+                                                </select>--%>
+                                            </div>
+
+                                            <input class="autosearch-input form-control" id="text-product" type="text" name="q" value="" size="50" autocomplete="off" placeholder="Tìm kiếm ...">
+
+                                            <button type="submit" class="button-search btn btn-primary"><i class="fa fa-search"></i></button>
+
+                                        </div>
+                                        <%--<input type="hidden" name="route" value="product/search" />--%>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //end Search -->
+                        <div class="child middle-right col-lg-6">
+                            <!--cart-->
+                            <div class="shopping_cart">
+                                <div id="cart" class="btn-shopping-cart">
+
+                                    <a data-loading-text="Loading... " class="btn-group top_cart dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                        <div class="shopcart">
+                                            <span class="icon-c">
+                                                <img src="../images/HeThong/icon-cart.png" />
+                                                <%--<i class="fa fa-cart-arrow-down"></i>--%>
+                                            </span>
+                                            <div class="shopcart-inner">
+                                                <%--<p class="text-shopping-cart">
+                                                    Giỏ hàng
+                                                </p>--%>
+
+                                                <span class="total-shopping-cart cart-total-full">
+                                                    <span class="items_cart" id="lblSoLuongGioHang" runat="server">02</span>
+                                                    <%--<span class="items_cart2"> Sản phẩm(s)</span>--%>
+                                                    <%--<span class="items_carts" id="TongTien" runat="server">( $162.00 )</span>--%>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <%--<ul class="wishlist-comp hidden-md hidden-sm hidden-xs" style="margin-left:30px">
+                                        <li class="compare hidden-xs" style="margin-left:15px"><a href="#" class="top-link-compare" title="Compare "><i class="fa fa-refresh"></i></a>
+                                        </li>
+                                        <li class="wishlist hidden-xs" style="margin-left:15px"><a href="#" id="wishlist-total" class="top-link-wishlist" title="Wish List (0) "><i class="fa fa-heart"></i></a>
+                                        </li>
+                                    </ul>--%>
+                                    <div id="dvSanPham" runat="server"></div>
+                                </div>
+                            </div>
+                            <!--//cart-->
+
+                            <ul class="wishlist-comp hidden-md hidden-sm hidden-xs">
+
+                                <li class="wishlist hidden-xs">
+                                    <img src="../images/HeThong/delivery.png" />
+                                    <b>Giao nhanh</b><p style="color: #797575">Tp.HCM</p>
+                                </li>
+                                <li class="wishlist hidden-xs">
+                                    <img src="../images/HeThong/sale-off.png" />
+                                    <b>Khuyến mãi</b><p style="color: #797575; white-space: nowrap">Giảm giá sốc</p>
+                                </li>
+                                <li class="wishlist hidden-xs">
+                                    <img src="../images/HeThong/user.png" />
+                                    <div id="accountControl" style="float: left" runat="server"></div>
+
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- //Header center -->
+
+            <!-- Header Bottom -->
+            <div class="header-bottom hidden-compact">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="bottom1 menu-vertical col-lg-2 col-md-3 col-sm-3">
+                            <div class="responsive so-megamenu megamenu-style-dev ">
+                                <div class="so-vertical-menu ">
+                                    <nav class="navbar-default">
+
+                                        <div class="container-megamenu vertical">
+                                            <div id="menuHeading">
+                                                <div class="megamenuToogle-wrapper">
+                                                    <div class="megamenuToogle-pattern">
+                                                        <div class="container">
+                                                            <div>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </div>
+                                                            Sản Phẩm                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="navbar-header">
+                                                <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
+                                                    <i class="fa fa-bars"></i>
+                                                    <span>Sản Phẩm     </span>
+                                                </button>
+                                            </div>
+                                            <div class="vertical-wrapper" id="ulLoaiSanPham" runat="server" style="opacity: 1">
+                                                <span id="remove-verticalmenu" class="fa fa-times"></span>
+                                                <div class="megamenu-pattern">
+                                                    <div class="container-mega">
+                                                        <ul class="megamenu">
+                                                            <li class="item-vertical  with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico10.png" alt="icon">
+                                                                    <span>Gifts & Toys</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="60">
+                                                                    <div class="content">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Apparel</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Accessories for Tablet PC</a></li>
+                                                                                                        <li><a href="#">Accessories for i Pad</a></li>
+                                                                                                        <li><a href="#">Accessories for iPhone</a></li>
+                                                                                                        <li><a href="#">Bags, Holiday Supplies</a></li>
+                                                                                                        <li><a href="#">Car Alarms and Security</a></li>
+                                                                                                        <li><a href="#">Car Audio &amp; Speakers</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Cables &amp; Connectors</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Cameras &amp; Photo</a></li>
+                                                                                                        <li><a href="#">Electronics</a></li>
+                                                                                                        <li><a href="#">Outdoor &amp; Traveling</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Camping &amp; Hiking</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Earings</a></li>
+                                                                                                        <li><a href="#">Shaving &amp; Hair Removal</a></li>
+                                                                                                        <li><a href="#">Salon &amp; Spa Equipment</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Smartphone &amp; Tablets</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Sports &amp; Outdoors</a></li>
+                                                                                                        <li><a href="#">Bath &amp; Body</a></li>
+                                                                                                        <li><a href="#">Gadgets &amp; Auto Parts</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Bags, Holiday Supplies</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#" onclick="window.location = '18_46';">Battereries &amp; Chargers</a></li>
+                                                                                                        <li><a href="#" onclick="window.location = '24_64';">Bath &amp; Body</a></li>
+                                                                                                        <li><a href="#" onclick="window.location = '18_45';">Headphones, Headsets</a></li>
+                                                                                                        <li><a href="#" onclick="window.location = '18_30';">Home Audio</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico1.png" alt="icon">
+                                                                    <span>Fashion & Accessories</span>
+
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical  style1 with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <span class="label"></span>
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico9.png" alt="icon">
+                                                                    <span>Electronic</span>
+
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="40">
+                                                                    <div class="content">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li><a href="#" class="main-menu">Smartphone</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Esdipiscing</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Scanners</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Apple</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Dell</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Scanners</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li><a href="#" class="main-menu">Electronics</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Asdipiscing</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Diam sit</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Labore et</a>
+                                                                                                        </li>
+                                                                                                        <li><a href="#">Monitors</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="row banner">
+                                                                                    <a href="#">
+                                                                                        <img src="/Content/UI/image/catalog/menu/megabanner/vbanner1.jpg" alt="banner1">
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico7.png" alt="icon">
+                                                                    <span>Health &amp; Beauty</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="60">
+                                                                    <div class="content">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Car Alarms and Security</a>
+                                                                                                    <ul>
+                                                                                                        <li><a href="#">Car Audio &amp; Speakers</a></li>
+                                                                                                        <li><a href="#">Gadgets &amp; Auto Parts</a></li>
+                                                                                                        <li><a href="#">Gadgets &amp; Auto Parts</a></li>
+                                                                                                        <li><a href="#">Headphones, Headsets</a></li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="24" onclick="window.location = '24';" class="main-menu">Health &amp; Beauty</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Home Audio</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Helicopters &amp; Parts</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Outdoor &amp; Traveling</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Toys &amp; Hobbies</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Electronics</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Earings</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Salon &amp; Spa Equipment</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Shaving &amp; Hair Removal</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Smartphone &amp; Tablets</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Sports &amp; Outdoors</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Flashlights &amp; Lamps</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Fragrances</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Fishing</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">FPV System &amp; Parts</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 static-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">More Car Accessories</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Lighter &amp; Cigar Supplies</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Mp3 Players &amp; Accessories</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Men Watches</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Mobile Accessories</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Gadgets &amp; Auto Parts</a>
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gift &amp; Lifestyle Gadgets</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gift for Man</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gift for Woman</a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <a href="#">Gift for Woman</a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical css-menu with-sub-menu hover">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico6.png" alt="icon">
+                                                                    <span>Smartphone &amp; Tablets</span>
+                                                                    <b class="fa-angle-right"></b>
+                                                                </a>
+                                                                <div class="sub-menu" data-subwidth="20">
+                                                                    <div class="content">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-12 hover-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Headphones, Headsets</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Home Audio</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Health &amp; Beauty</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Helicopters &amp; Parts</a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a href="#" class="main-menu">Helicopters &amp; Parts</a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico5.png" alt="icon">
+                                                                    <span>Health & Beauty</span>
+
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico4.png" alt="icon">
+                                                                    <span>Bathroom</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico3.png" alt="icon">
+                                                                    <span>Metallurgy</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico2.png" alt="icon">
+                                                                    <span>Bedroom</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical">
+                                                                <p class="close-menu"></p>
+
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico1.png" alt="icon">
+                                                                    <span>Health &amp; Beauty</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico11.png" alt="icon">
+                                                                    <span>Toys &amp; Hobbies </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico12.png" alt="icon">
+                                                                    <span>Jewelry &amp; Watches</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico9.png" alt="icon">
+                                                                    <span>Home &amp; Lights</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item-vertical" style="display: none;">
+                                                                <p class="close-menu"></p>
+                                                                <a href="#" class="clearfix">
+                                                                    <img src="/Content/UI/image/catalog/menu/icons/ico6.png" alt="icon">
+                                                                    <span>Metallurgy</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="loadmore">
+                                                                <i class="fa fa-plus-square-o"></i>
+                                                                <span class="more-view">More Categories</span>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Main menu -->
+                        <div class="main-menu-w col-lg-10 col-md-9" <%-- style="background: #0c839e;"--%>>
+                            <div class="responsive so-megamenu megamenu-style-dev">
+                                <div class="">
+                                    <nav class="navbar-default">
+                                        <div class=" container-megamenu  horizontal open ">
+                                            <div class="navbar-header">
+                                                <button type="button" id="show-megamenu" data-toggle="collapse" class="navbar-toggle">
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+
+                                            <div class="megamenu-wrapper">
+                                                <span id="remove-megamenu" class="fa fa-times"></span>
+                                                <div class="megamenu-pattern">
+                                                    <div class="container-mega">
+                                                        <ul id="sidebar" class="megamenu" runat="server" data-transition="slide" data-animationtime="250">
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_thuonghieu" href="<%=GetRouteUrl("pages", new { id = 12})%>" class="clearfix">
+                                                                    <img src="../images/HeThong/ThuongHieu.png"><strong>Thương hiệu</strong></a></li>
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_dichvu" href="<%=GetRouteUrl("tienich", new {})%>" class="clearfix">
+                                                                    <img src="../images/HeThong/NapThe.png"><strong>Tiện ích</strong></a></li>
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_magiamgia" href="<%=GetRouteUrl("pages", new { id = 10})%>" class="clearfix">
+                                                                    <img src="../images/HeThong/MaGiamGia.png"><strong>Mã giảm giá</strong></a></li>
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_tintuc" href="<%=GetRouteUrl("new", new { nameEn = "tin-tuc", id = 5})%>" class="clearfix">
+                                                                    <img src="../images/HeThong/TinTuc.png"><strong>Tin tức</strong></a></li>
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_huongdan" href="<%=GetRouteUrl("pages", new { id = 8})%>" class="clearfix">
+                                                                    <img src="../images/HeThong/HuongDan.png"><strong>Hướng dẫn</strong></a></li>
+                                                            <li>
+                                                                <p class="close-menu"></p>
+                                                                <a id="page_kiemtrahang" href="<%=GetRouteUrl("dangnhap_saleorder", new { })%>" class="clearfix">
+                                                                    <img src="../images/HeThong/KiemTra.png"><strong>Kiểm tra hàng</strong></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //end Main menu -->
+                        <%-- <div class="bottom3">                        
+                        <div class="telephone hidden-xs hidden-sm hidden-md">
+                            <ul class="blank"> 
+                                <li><a href="#"></a></li> 
+                                <li><a href="#"><i class="fa fa-phone-square"></i>0963 537 537</a></li> 
+                            </ul>
+                        </div>  
+                        <div class="signin-w hidden-md hidden-sm hidden-xs">
+                            <ul class="signin-link blank">                            
+                                <li class="log login"><i class="fa fa-envelope"></i> cskh@shopeco.vn</li>                                
+                            </ul>                       
+                        </div>                  
+                    </div>--%>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!-- //Header Container  -->
+
+        <!-- Main Container  -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- //Main Container -->
+
+        <!-- Footer Container -->
+        <footer class="footer-container typefooter-1">
+            <!-- Footer Top Container -->
+
+            <%-- <div class="container">
+                <div class="row footer-top">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="socials-w">
+                            <h2>Follow socials</h2>
+                            <ul class="socials">
+                                <li class="facebook"><a href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                <li class="twitter"><a href="https://twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                <li class="google_plus"><a href="https://plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a></li>
+                                <li class="pinterest"><a href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                                <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a></li>
+                                <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                                <li class="skype"><a href="#" target="_blank"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="module newsletter-footer1">
+                            <div class="newsletter">
+
+                                <div class="title-block">
+                                    <div class="page-heading font-title">
+                                        Signup for Newsletter
+                                    </div>
+
+                                </div>
+
+                                <div class="block_content">
+                                    <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
+                                        <div class="form-group">
+                                            <div class="input-box">
+                                                <input type="email" placeholder="Your email address..." value="" class="form-control" id="txtemail" name="txtemail" size="55">
+                                            </div>
+                                            <div class="subcribe">
+                                                <button class="btn btn-primary btn-default font-title" type="submit" onclick="return subscribe_newsletter();" name="submit">
+                                                    Subscribe
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+                                <!--/.modcontent-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+
+            <!-- /Footer Top Container -->
+
+            <div class="footer-first" style="background: #183544; color: #fff">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-information box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">LIÊN HỆ VỚI Shopeco</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li class="footer-li"><a href="#">Thời gian làm việc: 8h - 21h</a></li>
+                                            <li class="footer-li"><a href="#">0917 792 179 : Tư vấn bán hàng</a></li>
+                                            <li class="footer-li"><a href="#">Email: cskh@Shopeco.vn</a></li>
+                                            <li class="footer-li"><a href="#">Hướng dẫn mua hàng Online</a></li>
+                                            <li class="footer-li"><a href="#">Giới thiệu</a></li>
+                                            <li class="footer-li"><a href="#">Liên hệ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-information box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">CHÍNH SÁCH</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 1 }) %>">Điều khoản và dịch vụ</a></li>
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 2 }) %>">Chính sách bảo mật thông tin</a></li>
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 3 }) %>">Chính sách Bảo hành sản phẩm</a></li>
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 4 }) %>">Thông tin chuyển khoản</a></li>
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 5 }) %>">Vận chuyển & giao hàng</a></li>
+                                            <li class="footer-li"><a href="<%=GetRouteUrl("pages",new { id = 6 }) %>">Khuyến mại</a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-information box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">ĐĂNG KÝ NHẬN TIN TỪ Shopeco</h3>
+                                    <div></div>
+                                    <div class="footer-email-register">
+                                        <div class="footer-email-wrap-right">
+                                            <div class="footer-email-radio-group" style="opacity: 0;">
+                                                <div class="footer-radio-lable">
+                                                    <div class="lzd-radio-symbal">
+                                                        <span class="lzd-radio-circle-out"></span>
+                                                        <input type="radio" name="subscription" value="male">
+                                                        <span class="lzd-radio-circle-in"></span>
+                                                    </div>
+                                                    <label class="footer-form-input-label">Nam</label>
+                                                </div>
+                                                <div class="footer-radio-lable">
+                                                    <div class="lzd-radio-symbal">
+                                                        <span class="lzd-radio-circle-out"></span>
+                                                        <input type="radio" name="subscription" value="female">
+                                                        <span class="lzd-radio-circle-in"></span>
+                                                    </div>
+                                                    <label class="footer-form-input-label">Nữ</label>
+                                                </div>
+                                            </div>
+                                            <%--<input class="footer-form-input-submit footer-btn" type="submit" value="Đăng ký" data-text-submitting="Submitting...">--%>
+                                            <a class="footer-form-input-submit footer-btn" id="btnDangKyEmail">Đăng ký</a>
+                                        </div>
+                                        <div class="footer-email-wrap-left">
+                                            <input id="txtNhanEmail"" class="input-email" type="text" placeholder="Your Email Address" />
+                                        </div>
+                                    </div>
+                                    <div class="lzd-footer-app-downloads">
+                                        <div class="pull-left icon-logo-lazada-footer">
+                                            <img src="/Content/UI/image/catalog/logo.png" />
+                                        </div>
+                                        <div class="pull-left lzd-app-download-text">
+                                            <div class="title">THẢNH THƠI MUA SẮM</div>
+                                            <div class="text">Tải App Shopeco</div>
+                                        </div>
+                                        <a class="lzd-footer-sprit pull-left icon-appStore-footer icon-appstore-footer" href="https://app.adjust.com/vzvnak"></a>
+                                        <a class="lzd-footer-sprit pull-left icon-android-footer icon-appstore-footer" href="https://app.adjust.com/ox2wap"></a>
+                                    </div>
+                                    <div class="clear"></div>
+
+                                    <div class="lzd-footer-app-supplement">
+
+                                        <div>Shopeco – ĐẲNG CẤP HÀNG HIỆU</div>
+
+                                        <div>Địa chỉ: 49 Chương Dương, P.Linh Chiểu, Q.Thủ Đức, TP.HCM, Việt Nam. </div>
+
+                                        <div>Điện thoại: 0963 537 537. </div>
+
+                                        <div>Email: lienhe@Shopeco.vn.</div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <%--<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 col-style">
+                            <div class="box-service box-footer">
+                                <div class="module clearfix">
+                                    <h3 class="modtitle">SẢN PHẨM CHÍNH</h3>
+                                    <div class="modcontent">
+                                        <ul class="menu">
+                                            <li><a href="#">Bao da điện thoại</a></li>
+                                            <li><a href="#">Bao da Ipad</a></li>
+                                            <li><a href="#">Giày da nam</a></li>
+                                            <li><a href="#">Ví, bóp da nam</a></li>
+                                            <li><a href="#">Ví, bóp da nữ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>--%>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="footer-b">
+                        <div class="bottom-cont">
+                            <a href="#">
+                                <img src="https://laz-img-cdn.alicdn.com/tfs/TB1fj5Nfr_I8KJjy1XaXXbsxpXa-373-140.png" alt="DMCA.com Protection Status" style="width: 100px;">
+                            </a>
+                            <%--<a class="facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/Shopeco/" title="">
+                                <img src="../Content/UI//Content/UI//Content/UI/image/catalog/menu/facebook_circle.png"/>
+                                </a>
+                            <a class="google" target="_blank" rel="nofollow" href="https://plus.google.com/u/0/communities/117518779770584170110" title="">
+                                <img src="../Content/UI//Content/UI//Content/UI/image/catalog/menu/googleplus.png"/>
+                            </a>
+                            <a class="youtube" target="_blank" rel="nofollow" href="https://www.youtube.com/quanglv" title="">
+                                <img src="../Content/UI//Content/UI//Content/UI/image/catalog/menu/youtube.jpg" />
+                            </a>--%>
+                            <ul class="footer-links">
+                                <li style="border-left: none;"><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Hướng dẫn</a></li>
+                                <li><a href="#">Quy chế hoạt động</a></li>
+                                <li><a href="#">Cơ chế giải quyết tranh chấp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Container -->
+            <%--<div class="footer-bottom">
+                <div class="copyright-w">
+                    <div class="container">
+                        <div class="copyright">
+                            Coppyright © 2018 Shopeco.Vn. All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+            <!-- /Footer Bottom Container -->
+
+
+            <!--Back To Top-->
+            <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+        </footer>
+        <!-- //end Footer Container -->
+
+    </div>
+    <!-- End Color Scheme
+============================================ -->
+</body>
+<!-- Script
+    ============================================ -->
+<!-- Include Libs & Plugins
+============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+    $(document).ready(function () {
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#btnDangKyEmail').click(function () {
+            var T = $("#txtNhanEmail").val().trim();
+            var email = document.getElementById('txtNhanEmail');
+
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+                alert('Hãy nhập địa chỉ email hợp lệ \nExample@gmail.com');
+                email.focus;
+                return false;
+            }
+            else {
+                var xmlhttp;
+                if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        if (xmlhttp.responseText != "") {
+                            alert(xmlhttp.responseText);
+                            window.location.href = "/";
+
+                        }
+                        else {
+                            alert("Đã xảy ra lỗi, vui lòng thử lại !")
+                        }
+
+                    }
+                }
+                xmlhttp.open("GET", "../Ajax.aspx?Action=DangKyNhanMail&Mail=" + T, true);
+                xmlhttp.send();
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="/Content/UI/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/Content/UI/js/slick-slider/slick.js"></script>
+<script type="text/javascript" src="/Content/UI/js/themejs/libs.js"></script>
+<script type="text/javascript" src="/Content/UI/js/unveil/jquery.unveil.js"></script>
+<script type="text/javascript" src="/Content/UI/js/countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="/Content/UI/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/modernizr/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="/Content/UI/js/minicolors/jquery.miniColors.min.js"></script>
+
+<!-- Theme files
+============================================ -->
+
+<script type="text/javascript" src="/Content/UI/js/themejs/application.js"></script>
+<script type="text/javascript" src="/Content/UI/js/themejs/homepage.js"></script>
+<%--<script type="text/javascript" src="/Content/UI/js/themejs/toppanel.js"></script>--%>
+<script type="text/javascript" src="/Content/UI/js/themejs/so_megamenu.js"></script>
+<script type="text/javascript" src="/Content/UI/js/themejs/addtocart.js"></script>
+
+
+<script type="text/javascript"><!--
+    // Check if Cookie exists
+    if ($.cookie('display')) {
+        view = $.cookie('display');
+    } else {
+        view = 'grid';
+    }
+    if (view) display(view);
+    $(document).ready(function () {
+        $('.loadmore').click(function () {
+            $('.megamenu .item-vertical').each(function (index, value) {
+                $(value).css("display", "inherit");
+            });
+            
+        });
+        $('.loadmore.open').click(function () {
+            $('.megamenu .item-vertical').each(function (index, value) {
+                console.log(index + " - " + value);
+                if (index > 5)
+                $(value).css("display", "none");
+            });
+        });
+    });
+    //--></script>
+<%--<script src="../Content/UI/js/jquery-3.3.1.js"></script>--%>
+    
+</html>

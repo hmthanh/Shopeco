@@ -1,0 +1,1893 @@
+.col-1 {
+    flex: 0 0 6.25%;
+    width: 6.25%;
+    max-width: 6.25%;
+}
+
+.col-2 {
+    flex: 0 0 12.5%;
+    width: 12.5%;
+    max-width: 12.5%;
+}
+
+.col-3 {
+    flex: 0 0 18.75%;
+    width: 18.75%;
+    max-width: 18.75%;
+}
+
+.col-4 {
+    flex: 0 0 25%;
+    width: 25%;
+    max-width: 25%;
+}
+
+.col-5 {
+    flex: 0 0 31.25%;
+    width: 31.25%;
+    max-width: 31.25%;
+}
+
+.col-6 {
+    flex: 0 0 37.5%;
+    width: 37.5%;
+    max-width: 37.5%;
+}
+
+.col-7 {
+    flex: 0 0 43.75%;
+    width: 43.75%;
+    max-width: 43.75%;
+}
+
+.col-8 {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 50%;
+}
+
+.col-9 {
+    flex: 0 0 56.25%;
+    width: 56.25%;
+    max-width: 56.25%;
+}
+
+.col-10 {
+    flex: 0 0 62.5%;
+    width: 62.5%;
+    max-width: 62.5%;
+}
+
+.col-11 {
+    flex: 0 0 68.75%;
+    width: 68.75%;
+    max-width: 68.75%;
+}
+
+.col-12 {
+    flex: 0 0 75%;
+    width: 75%;
+    max-width: 75%;
+}
+
+.col-13 {
+    flex: 0 0 81.25%;
+    width: 81.25%;
+    max-width: 81.25%;
+}
+
+.col-14 {
+    flex: 0 0 87.5%;
+    width: 87.5%;
+    max-width: 87.5%;
+}
+
+.col-15 {
+    flex: 0 0 93.75%;
+    width: 93.75%;
+    max-width: 93.75%;
+}
+
+.col-16 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.Shopee-badge {
+    display: inline-block;
+    margin: 0 0 0 4px;
+    background: #FF9800;
+    color: #fff;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 8px;
+    border-radius: 2rem;
+    letter-spacing: 1px;
+}
+
+    .Shopee-badge.simple {
+        background: transparent;
+        color: #FF9800;
+        font-size: 14px;
+        padding: 0;
+        min-width: 16px;
+        text-align: center;
+    }
+
+        .Shopee-badge.simple:before {
+            content: "(";
+        }
+
+        .Shopee-badge.simple:after {
+            content: ")";
+        }
+
+    .Shopee-badge.small {
+        line-height: 16px;
+        font-size: 10px;
+        padding: 0 4px;
+        letter-spacing: 1px;
+        height: 14px;
+    }
+
+    .Shopee-badge.inverse {
+        color: #FF9800;
+        background-color: #fff;
+    }
+
+.slide-left-enter-active, .slide-left-leave-active {
+    transition: transform .5s;
+}
+
+.slide-left-enter-to, .slide-left-leave-to {
+    transform: translateX(-100%);
+}
+
+.slide-left-reverse-enter-active, .slide-left-reverse-leave-active {
+    transition: transform .5s;
+}
+
+.slide-left-reverse-enter {
+    transform: translateX(-200%);
+}
+
+.slide-left-reverse-leave {
+    transform: translateX(0);
+}
+
+.slide-left-reverse-enter-to {
+    transform: translateX(-100%);
+}
+
+.slide-left-reverse-leave-to {
+    transform: translateX(100%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.spinning-ring, .spinning-s {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+    background-image: url(data:image/png;base64,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);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.spinning-ring {
+    background-image: url(data:image/png;base64,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);
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.Shopee-footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+    .Shopee-footer .logo--Shopee svg {
+        width: 32px;
+        height: 32px;
+        fill: #ddd;
+        margin-top: 10px;
+    }
+
+
+
+.Shopee-toast__icon--message.Shopee-icon {
+    fill: #1791f2;
+}
+
+.Shopee-toast__icon--success.Shopee-icon {
+    fill: #5c7;
+}
+
+.Shopee-toast__icon--warning.Shopee-icon {
+    fill: #ffbf00;
+}
+
+.Shopee-toast__icon--error.Shopee-icon {
+    fill: #ff4742;
+}
+
+.Shopee-toast__content {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #333;
+    word-break: break-all;
+}
+
+.Shopee-toast.has-icon .Shopee-toast__content {
+    margin-left: 32px;
+}
+
+.Shopee-modal__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 32px;
+    transform: translate(-50%,-50%);
+    transform-origin: top;
+}
+
+.Shopee-modal__content {
+    width: 500px;
+    overflow-y: auto;
+    color: #555;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,.05),0 16px 16px 0 rgba(0,0,0,.09);
+}
+
+.Shopee-modal__content--small {
+    width: 400px;
+}
+
+.Shopee-modal__content--medium {
+    width: 600px;
+}
+
+.Shopee-modal__content--large {
+    width: 800px;
+}
+
+.Shopee-modal__content--ex-large {
+    width: 1200px;
+}
+
+.Shopee-modal__content--medium, .Shopee-modal__content--small {
+    max-height: 600px;
+}
+
+.Shopee-modal__content--ex-large, .Shopee-modal__content--large {
+    max-height: 80%;
+}
+
+.Shopee-modal__header {
+    padding: 24px 24px 16px;
+    padding-bottom: 0;
+}
+
+.Shopee-modal__header-inner {
+    position: relative;
+}
+
+.Shopee-modal__header-inner__has-back {
+    border-left: 36px solid transparent;
+}
+
+.Shopee-modal__header-back.Shopee-icon {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -36px;
+    line-height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    .Shopee-modal__header-back.Shopee-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+.Shopee-modal__header-back.Shopee-icon-spin {
+    animation: Shopee-icon-spin 1s 0s infinite linear;
+}
+
+.Shopee-modal__title {
+    font-size: 20px;
+}
+
+.Shopee-modal__subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1;
+    color: #888;
+}
+
+.Shopee-modal__body {
+    padding: 24px;
+}
+
+.Shopee-modal__footer {
+    padding: 16px 24px 24px;
+    padding-top: 0;
+    text-align: right;
+}
+
+    .Shopee-modal__footer .Shopee-button:not(:first-child) {
+        margin-left: 16px;
+    }
+
+.Shopee-modal__close.Shopee-icon {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .Shopee-modal__close.Shopee-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+.Shopee-modal__close.Shopee-icon-spin {
+    animation: Shopee-icon-spin 1s 0s infinite linear;
+}
+
+.Shopee-modal__close--inside.Shopee-icon {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    color: #bbb;
+}
+
+    .Shopee-modal__close--inside.Shopee-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+.Shopee-modal__close--inside.Shopee-icon-spin {
+    animation: Shopee-icon-spin 1s 0s infinite linear;
+}
+
+.fade-fast-enter-active, .fade-fast-leave-active {
+    transition: all .2s ease-in-out;
+}
+
+.fade-fast-enter, .fade-fast-leave-active {
+    opacity: 0;
+}
+
+.move-down-fast-enter-active, .move-down-fast-leave-active {
+    transition: all .2s ease-in-out;
+}
+
+.move-down-fast-enter, .move-down-fast-leave-active {
+    opacity: 0;
+    transform: translate(-50%,-60%) scaleY(.95);
+}
+
+.Shopee-popper {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.09),0 8px 8px 0 rgba(0,0,0,.05);
+}
+
+    .Shopee-popper[x-placement^=bottom] {
+        margin-top: 4px;
+    }
+
+    .Shopee-popper[x-placement^=top] {
+        margin-bottom: 4px;
+    }
+
+    .Shopee-popper[x-placement^=left] {
+        margin-right: 4px;
+    }
+
+    .Shopee-popper[x-placement^=right] {
+        margin-left: 4px;
+    }
+
+.slide-fast-enter-active, .slide-fast-leave-active {
+    transition: all .2s ease-in-out;
+}
+
+.slide-fast-enter, .slide-fast-leave-active {
+    opacity: 0;
+    transform: scaleY(.8);
+}
+
+.Shopee-tooltip, .Shopee-tooltip__ref {
+    display: inline-block;
+}
+
+.Shopee-tooltip__popper.Shopee-popper {
+    z-index: 1;
+    padding: 12px 8px;
+    font-size: 12px;
+    line-height: 18px;
+    word-wrap: break-word;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.03);
+}
+
+    .Shopee-tooltip__popper.Shopee-popper[x-placement^=bottom] {
+        margin-top: 12px;
+    }
+
+    .Shopee-tooltip__popper.Shopee-popper[x-placement^=top] {
+        margin-bottom: 12px;
+    }
+
+    .Shopee-tooltip__popper.Shopee-popper[x-placement^=left] {
+        margin-right: 12px;
+    }
+
+    .Shopee-tooltip__popper.Shopee-popper[x-placement^=right] {
+        margin-left: 12px;
+    }
+
+.Shopee-tooltip__popper--dark.Shopee-popper {
+    color: #fff;
+    background-color: rgba(0,0,0,.8);
+}
+
+    .Shopee-tooltip__popper--dark.Shopee-popper:after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        content: "";
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=top]:after {
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-top: 5px solid rgba(0,0,0,.8);
+        border-bottom: 0;
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=bottom]:after {
+        top: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-top: 0;
+        border-bottom: 5px solid rgba(0,0,0,.8);
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=bottom-start]:after, .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=top-start]:after {
+        left: 8px;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=bottom-end]:after, .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=top-end]:after {
+        right: 8px;
+        left: auto;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=left]:after {
+        top: 50%;
+        right: -5px;
+        margin-top: -5px;
+        border-right: 0;
+        border-left: 5px solid rgba(0,0,0,.8);
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=right]:after {
+        top: 50%;
+        left: -5px;
+        margin-top: -5px;
+        border-right: 5px solid rgba(0,0,0,.8);
+        border-left: 0;
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=left-start]:after, .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=right-start]:after {
+        top: 8px;
+        margin-top: 0;
+    }
+
+    .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=left-end]:after, .Shopee-tooltip__popper--dark.Shopee-popper[x-placement^=right-end]:after {
+        top: auto;
+        bottom: 8px;
+        margin-top: 0;
+    }
+
+.Shopee-tooltip__popper--light {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+}
+
+    .Shopee-tooltip__popper--light:before {
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        content: "";
+    }
+
+    .Shopee-tooltip__popper--light:after {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        content: "";
+        transform: rotate(45deg);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.03);
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom]:before {
+        top: 0;
+        left: 50%;
+        width: 14px;
+        height: 7px;
+        margin-left: -7px;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom]:after {
+        top: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-top: 1px solid #f5f5f5;
+        border-left: 1px solid #f5f5f5;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=top]:before {
+        bottom: 0;
+        left: 50%;
+        width: 14px;
+        height: 7px;
+        margin-left: -7px;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=top]:after {
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-right: 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left]:before {
+        top: 50%;
+        right: 0;
+        width: 7px;
+        height: 14px;
+        margin-top: -7px;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left]:after {
+        top: 50%;
+        right: -5px;
+        margin-top: -5px;
+        border-top: 1px solid #f5f5f5;
+        border-right: 1px solid #f5f5f5;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=right]:before {
+        top: 50%;
+        left: 0;
+        width: 7px;
+        height: 14px;
+        margin-top: -7px;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=right]:after {
+        top: 50%;
+        left: -5px;
+        margin-top: -5px;
+        border-bottom: 1px solid #f5f5f5;
+        border-left: 1px solid #f5f5f5;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom-start]:before, .Shopee-tooltip__popper--light[x-placement^=top-start]:before {
+        left: 5px;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom-start]:after, .Shopee-tooltip__popper--light[x-placement^=top-start]:after {
+        left: 8px;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom-end]:before, .Shopee-tooltip__popper--light[x-placement^=top-end]:before {
+        right: 5px;
+        left: auto;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=bottom-end]:after, .Shopee-tooltip__popper--light[x-placement^=top-end]:after {
+        right: 8px;
+        left: auto;
+        margin-left: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left-start]:before, .Shopee-tooltip__popper--light[x-placement^=right-start]:before {
+        top: 5px;
+        margin-top: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left-start]:after, .Shopee-tooltip__popper--light[x-placement^=right-start]:after {
+        top: 8px;
+        margin-top: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left-end]:before, .Shopee-tooltip__popper--light[x-placement^=right-end]:before {
+        top: auto;
+        bottom: 5px;
+        margin-top: 0;
+    }
+
+    .Shopee-tooltip__popper--light[x-placement^=left-end]:after, .Shopee-tooltip__popper--light[x-placement^=right-end]:after {
+        top: auto;
+        bottom: 8px;
+        margin-top: 0;
+    }
+
+.zoom-fast-enter-active, .zoom-fast-leave-active {
+    transition: all .2s ease-in-out;
+}
+
+.zoom-fast-enter, .zoom-fast-leave-active {
+    opacity: 0;
+    transform: scale(.8);
+}
+
+.Shopee-checkbox {
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Shopee-checkbox__input {
+    display: none;
+}
+
+    .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator {
+        background-color: #FF9800;
+        border-color: #FF9800;
+    }
+
+        .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator .Shopee-icon {
+            transform: scale(1);
+        }
+
+.Shopee-checkbox__indicator {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+
+    .Shopee-checkbox__indicator:hover {
+        border-color: #FF9800;
+    }
+
+    .Shopee-checkbox__indicator .Shopee-icon {
+        display: inline-block;
+        line-height: 0;
+        fill: currentColor;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 18px;
+        height: 18px;
+        transform: scale(0);
+        transition: transform .2s;
+        fill: #fff;
+    }
+
+        .Shopee-checkbox__indicator .Shopee-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+    .Shopee-checkbox__indicator .Shopee-icon-spin {
+        animation: Shopee-icon-spin 1s 0s infinite linear;
+    }
+
+.Shopee-checkbox.indeterminate .Shopee-checkbox__indicator {
+    background-color: #FF9800;
+    border-color: #FF9800;
+}
+
+    .Shopee-checkbox.indeterminate .Shopee-checkbox__indicator .Shopee-icon {
+        display: none;
+    }
+
+    .Shopee-checkbox.indeterminate .Shopee-checkbox__indicator:before {
+        position: absolute;
+        top: 7px;
+        left: 3px;
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+        border: 0;
+        content: "";
+        transform: none;
+    }
+
+.Shopee-checkbox__label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.Shopee-checkbox.disabled {
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+    .Shopee-checkbox.disabled .Shopee-checkbox__indicator {
+        background-color: #fafafa;
+    }
+
+        .Shopee-checkbox.disabled .Shopee-checkbox__indicator:hover {
+            border-color: #dbdbdb;
+        }
+
+    .Shopee-checkbox.disabled.indeterminate .Shopee-checkbox__indicator, .Shopee-checkbox.disabled .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator {
+        background-color: #dbdbdb;
+        border-color: #dbdbdb;
+    }
+
+.Shopee-checkbox--outline.disabled .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator {
+    background-color: #fafafa;
+    border-color: #dbdbdb;
+}
+
+    .Shopee-checkbox--outline.disabled .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator .Shopee-icon {
+        fill: #dbdbdb;
+    }
+
+.Shopee-checkbox--outline .Shopee-checkbox__input:checked + .Shopee-checkbox__indicator {
+    background-color: #fff;
+}
+
+.Shopee-checkbox--outline .Shopee-checkbox__indicator .Shopee-icon {
+    fill: #FF9800;
+}
+
+.Shopee-checkbox-button {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 13px;
+    line-height: 32px;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+
+.Shopee-checkbox-button__indicator {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+}
+
+    .Shopee-checkbox-button__indicator .Shopee-icon {
+        display: inline-block;
+        line-height: 0;
+        fill: currentColor;
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+        width: 12px;
+        height: 12px;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        fill: #fff;
+    }
+
+        .Shopee-checkbox-button__indicator .Shopee-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+    .Shopee-checkbox-button__indicator .Shopee-icon-spin {
+        animation: Shopee-icon-spin 1s 0s infinite linear;
+    }
+
+    .Shopee-checkbox-button__indicator:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        content: "";
+        transition: border-color .2s ease-in-out;
+    }
+
+.Shopee-checkbox-button.checked, .Shopee-checkbox-button:hover {
+    color: #FF9800;
+    border-color: #FF9800;
+}
+
+    .Shopee-checkbox-button.checked .Shopee-checkbox-button__indicator:before {
+        border-right-color: #FF9800;
+        border-bottom-color: #FF9800;
+    }
+
+    .Shopee-checkbox-button.checked .Shopee-checkbox-button__indicator .Shopee-icon {
+        opacity: 1;
+    }
+
+    .Shopee-checkbox-button.checked.disabled .Shopee-checkbox-button__indicator:before, .Shopee-checkbox-button.checked.disabled:hover .Shopee-checkbox-button__indicator:before {
+        border-right-color: #dbdbdb;
+        border-bottom-color: #dbdbdb;
+    }
+
+.Shopee-checkbox-button.disabled, .Shopee-checkbox-button.disabled:hover {
+    color: #bbb;
+    cursor: not-allowed;
+    background-color: #fafafa;
+    border-color: #dbdbdb;
+}
+
+.Shopee-checkbox-button__input {
+    display: none;
+}
+
+.Shopee-checkbox-button__label, .Shopee-checkbox-group {
+    display: inline-block;
+}
+
+    .Shopee-checkbox-group .Shopee-checkbox:not(:first-child) {
+        margin-left: 30px;
+    }
+
+    .Shopee-checkbox-group.vertical {
+        vertical-align: middle;
+    }
+
+        .Shopee-checkbox-group.vertical .Shopee-checkbox {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+        }
+
+            .Shopee-checkbox-group.vertical .Shopee-checkbox:not(:first-child) {
+                margin-top: 16px;
+            }
+
+        .Shopee-checkbox-group.vertical .Shopee-checkbox-button:not(:first-child) {
+            margin-top: 8px;
+        }
+
+    .Shopee-checkbox-group .Shopee-checkbox-button {
+        float: left;
+    }
+
+        .Shopee-checkbox-group .Shopee-checkbox-button:not(:first-child) {
+            margin-left: 8px;
+        }
+
+.Shopee-checkbox-group--large .Shopee-checkbox-button {
+    height: 40px;
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.Shopee-checkbox-group--large .Shopee-checkbox-button__indicator {
+    width: 20px;
+    height: 20px;
+}
+
+    .Shopee-checkbox-group--large .Shopee-checkbox-button__indicator:before {
+        border-width: 10px;
+    }
+
+    .Shopee-checkbox-group--large .Shopee-checkbox-button__indicator .Shopee-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+.Shopee-checkbox-group--small .Shopee-checkbox-button {
+    height: 24px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.Shopee-checkbox-group--small .Shopee-checkbox-button__indicator {
+    width: 12px;
+    height: 12px;
+}
+
+    .Shopee-checkbox-group--small .Shopee-checkbox-button__indicator:before {
+        border-width: 6px;
+    }
+
+    .Shopee-checkbox-group--small .Shopee-checkbox-button__indicator .Shopee-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+.Shopee-button {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .Shopee-button .Shopee-icon {
+        display: inline-block;
+        line-height: 0;
+        fill: currentColor;
+        width: 13px;
+        height: 13px;
+        vertical-align: middle;
+    }
+
+        .Shopee-button .Shopee-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+    .Shopee-button .Shopee-icon-spin {
+        animation: Shopee-icon-spin 1s 0s infinite linear;
+    }
+
+    .Shopee-button .Shopee-icon + span {
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    .Shopee-button.loading:before {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        background-color: hsla(0,0%,100%,.4);
+        border-radius: inherit;
+        content: "";
+    }
+
+    .Shopee-button:hover {
+        color: #555;
+        background-color: #f7f7f7;
+        border-color: #dbdbdb;
+    }
+
+    .Shopee-button:active {
+        color: #555;
+        background-color: #f0f0f0;
+        border-color: #dbdbdb;
+    }
+
+    .Shopee-button.disabled, .Shopee-button.disabled:hover {
+        color: #bbb;
+        cursor: not-allowed;
+        background-color: #fafafa;
+        border-color: #dbdbdb;
+    }
+
+    .Shopee-button.Shopee-button--outline {
+        color: #fff;
+        background-color: transparent;
+        border-color: #dbdbdb;
+    }
+
+        .Shopee-button.Shopee-button--outline:hover {
+            color: #fff;
+            background-color: hsla(0,0%,100%,.08);
+            border-color: #dbdbdb;
+        }
+
+        .Shopee-button.Shopee-button--outline:active {
+            color: #555;
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        .Shopee-button.Shopee-button--outline.disabled, .Shopee-button.Shopee-button--outline.disabled:hover {
+            color: #ccc;
+            background-color: transparent;
+            border-color: #ccc;
+        }
+
+    .Shopee-button.Shopee-button--frameless {
+        color: #555;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+        .Shopee-button.Shopee-button--frameless:hover {
+            color: #555;
+            background-color: #f7f7f7;
+            border-color: transparent;
+        }
+
+        .Shopee-button.Shopee-button--frameless:active {
+            color: #555;
+            background-color: #f0f0f0;
+            border-color: transparent;
+        }
+
+        .Shopee-button.Shopee-button--frameless.disabled, .Shopee-button.Shopee-button--frameless.disabled:hover {
+            color: #ccc;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+    .Shopee-button.Shopee-button--round {
+        border-radius: 16px;
+    }
+
+.Shopee-button--large {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+    .Shopee-button--large.Shopee-button--round {
+        border-radius: 20px;
+    }
+
+    .Shopee-button--large .Shopee-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+.Shopee-button--small {
+    height: 24px;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+    .Shopee-button--small.Shopee-button--round {
+        border-radius: 12px;
+    }
+
+    .Shopee-button--small .Shopee-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+.Shopee-button--block {
+    width: 100%;
+}
+
+.Shopee-button--compact {
+    padding: 0 8px;
+}
+
+.Shopee-button--rich {
+    height: auto;
+    padding: 8px 24px;
+}
+
+    .Shopee-button--rich .Shopee-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+
+        .Shopee-button--rich .Shopee-icon + .Shopee-button__rich-content {
+            display: inline-block;
+            margin-left: 16px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+.Shopee-button--primary {
+    color: #fff;
+    background-color: #FF9800;
+    border-color: #FF9800;
+}
+
+    .Shopee-button--primary:hover {
+        color: #fff;
+        background-color: #7fa502;
+        border-color: #7fa502;
+    }
+
+    .Shopee-button--primary:active {
+        color: #fff;
+        background-color: #7fa502;
+        border-color: #7fa502;
+    }
+
+    .Shopee-button--primary.disabled, .Shopee-button--primary.disabled:hover {
+        color: #fff;
+        background-color: #ffbca7;
+        border-color: #ffbca7;
+    }
+
+    .Shopee-button--primary.Shopee-button--outline {
+        color: #FF9800;
+        background-color: transparent;
+        border-color: #FF9800;
+    }
+
+        .Shopee-button--primary.Shopee-button--outline:hover {
+            color: #FF9800;
+            background-color: #fff2ed;
+            border-color: #FF9800;
+        }
+
+        .Shopee-button--primary.Shopee-button--outline:active {
+            color: #fff;
+            background-color: #FF9800;
+            border-color: #FF9800;
+        }
+
+        .Shopee-button--primary.Shopee-button--outline.disabled, .Shopee-button--primary.Shopee-button--outline.disabled:hover {
+            color: #ffbca7;
+            background-color: transparent;
+            border-color: #ffbca7;
+        }
+
+    .Shopee-button--primary.Shopee-button--frameless {
+        color: #FF9800;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+        .Shopee-button--primary.Shopee-button--frameless:hover {
+            color: #FF9800;
+            background-color: #fff2ed;
+            border-color: #fff2ed;
+        }
+
+        .Shopee-button--primary.Shopee-button--frameless:active {
+            color: #fff;
+            background-color: #FF9800;
+            border-color: #FF9800;
+        }
+
+        .Shopee-button--primary.Shopee-button--frameless.disabled, .Shopee-button--primary.Shopee-button--frameless.disabled:hover {
+            color: #ffbca7;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+.Shopee-button__description {
+    margin-top: 2px;
+    font-size: 11px;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.Shopee-button-group {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .Shopee-button-group .Shopee-button {
+        float: left;
+    }
+
+        .Shopee-button-group .Shopee-button:not(:last-child):not(:first-child) {
+            border-radius: 0;
+        }
+
+        .Shopee-button-group .Shopee-button:not(:last-child) {
+            margin-right: -1px;
+        }
+
+        .Shopee-button-group .Shopee-button:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .Shopee-button-group .Shopee-button:last-child {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+    .Shopee-button-group.vertical .Shopee-button {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+        .Shopee-button-group.vertical .Shopee-button:not(:last-child):not(:first-child) {
+            border-radius: 0;
+        }
+
+        .Shopee-button-group.vertical .Shopee-button:not(:last-child) {
+            margin-bottom: -1px;
+        }
+
+        .Shopee-button-group.vertical .Shopee-button:first-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .Shopee-button-group.vertical .Shopee-button:last-child {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+.Shopee-input {
+    background-color: #fff;
+}
+
+.Shopee-input__inner {
+    position: relative;
+    display: inline-table;
+    width: 100%;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    outline: none;
+    transition: border .2s ease-in-out;
+}
+
+    .Shopee-input__inner.focused, .Shopee-input__inner:hover {
+        border-color: #bbb;
+    }
+
+    .Shopee-input__inner .Shopee-input__clear-btn.Shopee-icon, .Shopee-input__inner .Shopee-input__prefix-icon.Shopee-icon, .Shopee-input__inner .Shopee-input__suffix-icon.Shopee-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .Shopee-input__inner .Shopee-input__input {
+        height: 30px;
+        font-size: 14px;
+    }
+
+.Shopee-input__inner--small {
+    height: 24px;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+    .Shopee-input__inner--small .Shopee-input__clear-btn.Shopee-icon, .Shopee-input__inner--small .Shopee-input__prefix-icon.Shopee-icon, .Shopee-input__inner--small .Shopee-input__suffix-icon.Shopee-icon {
+        width: 8px;
+        height: 8px;
+    }
+
+    .Shopee-input__inner--small .Shopee-input__input {
+        height: 22px;
+        font-size: 12px;
+    }
+
+.Shopee-input__inner--large {
+    height: 40px;
+}
+
+    .Shopee-input__inner--large .Shopee-input__clear-btn.Shopee-icon, .Shopee-input__inner--large .Shopee-input__prefix-icon.Shopee-icon, .Shopee-input__inner--large .Shopee-input__suffix-icon.Shopee-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .Shopee-input__inner--large .Shopee-input__input {
+        height: 38px;
+        font-size: 14px;
+    }
+
+.Shopee-input__inner.error {
+    background-color: #fff1f0;
+    border-color: #ff4742;
+}
+
+    .Shopee-input__inner.error .Shopee-input__input {
+        background-color: #fff1f0;
+    }
+
+.Shopee-input__inner.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: #fafafa;
+    border-color: #e8e8e8;
+}
+
+    .Shopee-input__inner.disabled:hover {
+        border-color: #e8e8e8;
+    }
+
+    .Shopee-input__inner.disabled .Shopee-input__input {
+        color: #ccc;
+        cursor: not-allowed;
+        background-color: #fafafa;
+    }
+
+.Shopee-input__inner.active-clearable:hover .Shopee-input__clear-btn {
+    display: table-cell;
+}
+
+.Shopee-input__input {
+    display: table-cell;
+    width: 100%;
+    padding: 0;
+    color: #191919;
+    vertical-align: middle;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+    .Shopee-input__input::-webkit-input-placeholder {
+        color: #bbb;
+    }
+
+    .Shopee-input__input:-ms-input-placeholder, .Shopee-input__input::-ms-input-placeholder {
+        color: #bbb;
+    }
+
+    .Shopee-input__input::placeholder {
+        color: #bbb;
+    }
+
+.Shopee-input__prefix, .Shopee-input__suffix {
+    position: relative;
+    display: table-cell;
+    width: 1px;
+    height: 100%;
+    line-height: 0;
+    color: #bbb;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.Shopee-input__prefix-icon.Shopee-icon, .Shopee-input__suffix-icon.Shopee-icon {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+}
+
+    .Shopee-input__prefix-icon.Shopee-icon svg, .Shopee-input__suffix-icon.Shopee-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+.Shopee-input__prefix-icon.Shopee-icon-spin, .Shopee-input__suffix-icon.Shopee-icon-spin {
+    animation: Shopee-icon-spin 1s 0s infinite linear;
+}
+
+.Shopee-input__clear-btn.Shopee-icon {
+    display: none;
+    fill: #dbdbdb;
+}
+
+.Shopee-input__prefix {
+    padding-right: 4px;
+}
+
+.Shopee-input__suffix {
+    padding-left: 4px;
+}
+
+.Shopee-input__area {
+    width: 100%;
+    font-size: 14px;
+    vertical-align: top;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+    .Shopee-input__area .Shopee-input__inner {
+        display: inline-block;
+        padding: 12px;
+    }
+
+.Shopee-input__error-msg {
+    margin: 6px 0;
+    font-size: 12px;
+    line-height: 1em;
+    color: #ff4742;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+@keyframes Shopee-icon-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.Shopee-icon {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+}
+
+    .Shopee-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+.Shopee-icon-spin {
+    animation: Shopee-icon-spin 1s 0s infinite linear;
+}
+
+.header[data-v-6c2ea036] {
+    background: #FF9800;
+    width: 100%;
+    min-width: 1200px;
+    height: 56px;
+    left: 0;
+    top: 0;
+    z-index: 90001;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .wrapper[data-v-6c2ea036] {
+    align-items: center;
+}
+
+.header .wrapper .logo[data-v-6c2ea036] svg {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    fill: #fff;
+}
+
+.header .wrapper .brand[data-v-6c2ea036] {
+    color: white;/*#7fa502;;*/
+    position: relative;
+    font-size: 1.8rem;
+    top: -1rem;
+    left: 8px;
+}
+
+.header .wrapper .home[data-v-6c2ea036] {
+    float: right;
+    display: block;
+}
+
+.header .wrapper .home .link[data-v-6c2ea036], .header .wrapper .home .mall[data-v-6c2ea036], .header .wrapper .home .sns[data-v-6c2ea036] {
+    display: inline-block;
+}
+
+.header .wrapper .home .link[data-v-6c2ea036], .header .wrapper .home .mall[data-v-6c2ea036] {
+    padding: 0 16px;
+    border-right: 1px solid hsla(0,0%,100%,.27);
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    top: 2px;
+}
+
+.header .wrapper .home .link a[data-v-6c2ea036], .header .wrapper .home .mall a[data-v-6c2ea036] {
+    color: #fff;
+}
+
+    .header .wrapper .home .link a[data-v-6c2ea036]:hover, .header .wrapper .home .mall a[data-v-6c2ea036]:hover {
+        text-decoration: underline;
+    }
+
+.header .wrapper .home .link .Shopee-badge[data-v-6c2ea036], .header .wrapper .home .mall .Shopee-badge[data-v-6c2ea036] {
+    position: relative;
+    bottom: 8px;
+}
+
+.header .wrapper .home .sns[data-v-6c2ea036] {
+    padding: 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: transparent;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+    .header .wrapper .home .sns[data-v-6c2ea036] svg {
+        width: 14px;
+        height: 14px;
+        fill: #fff;
+    }
+
+    .header .wrapper .home .sns[data-v-6c2ea036]:hover {
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+        .header .wrapper .home .sns[data-v-6c2ea036]:hover svg {
+            fill: #FF9800;
+        }
+
+.header .wrapper .home .sns.campus[data-v-6c2ea036] {
+    position: relative;
+}
+
+.header .wrapper .home .sns.campus .label[data-v-6c2ea036] {
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    background: #fff;
+    color: #FF9800;
+    font-size: 12px;
+    padding: 1px 4px;
+    transform: scale(.6);
+    transition: all .3s;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.button-input[data-v-b4d5ec76] {
+    display: flex;
+    height: 40px;
+    line-height: 38px;
+    position: relative;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+}
+
+    .button-input[data-v-b4d5ec76] .Shopee-input {
+        flex: 1;
+    }
+
+    .button-input[data-v-b4d5ec76] .Shopee-input__inner {
+        border: none;
+        padding: 0 20px;
+    }
+
+        .button-input[data-v-b4d5ec76] .Shopee-input__inner input {
+            border-radius: 4px 0 0 4px;
+        }
+
+    .button-input[data-v-b4d5ec76] .Shopee-button {
+        height: auto;
+        border: none;
+        border-left: 1px solid #e8e8e8;
+        border-radius: 0 4px 4px 0;
+    }
+
+.otp-verification[data-v-4dba4860] {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.otp-verification .box[data-v-4dba4860] {
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.otp-verification .heading[data-v-4dba4860] {
+    font-size: 24px;
+    color: #FF9800;
+    margin: 0 0 20px;
+    font-weight: 400;
+}
+
+.otp-verification .message[data-v-4dba4860] {
+    font-size: 13px;
+    color: #8c8c8c;
+    margin-bottom: 20px;
+}
+
+.verify-error[data-v-4dba4860] {
+    font-size: 14px;
+    text-align: center;
+    color: #FF9800;
+    background-color: rgba(255,87,34,.09);
+    border: 1px solid #FF9800;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 16px;
+}
+
+.signin-panel[data-v-44c03dd9] {
+    background-color: #fff;
+    box-shadow: 0 .2rem .4rem rgba(0,0,0,.09);
+    width: 410px;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+.signin[data-v-44c03dd9] {
+    display: flex;
+    align-items: flex-start;
+    width: 200%;
+}
+
+.signin > div[data-v-44c03dd9] {
+    width: 50%;
+}
+
+.signin-title[data-v-44c03dd9] {
+    padding: 24px 0 0;
+    text-align: center;
+    font-size: 24px;
+    color: #FF9800;
+}
+
+    .signin-title[data-v-44c03dd9] svg {
+        position: relative;
+        top: 10px;
+        left: 5px;
+        fill: #FF9800;
+        width: 48px;
+        height: 48px;
+        margin-right: 8px;
+    }
+
+.signin-form[data-v-44c03dd9] {
+    position: relative;
+    padding: 24px 40px;
+}
+
+    .signin-form[data-v-44c03dd9] .Shopee-input__inner {
+        border-radius: 2rem;
+        min-width: 200px;
+    }
+
+.signin-form .Shopee-button[data-v-44c03dd9], .signin-form .Shopee-input[data-v-44c03dd9] {
+    margin-bottom: 16px;
+}
+
+    .signin-form .Shopee-button[data-v-44c03dd9]:last-child, .signin-form .Shopee-input[data-v-44c03dd9]:last-child {
+        margin-bottom: 0;
+    }
+
+.signin-form .grid[data-v-44c03dd9]:not(.or) {
+    padding-bottom: 12px;
+    font-size: 13px;
+}
+
+.signin-form .remember[data-v-44c03dd9] {
+    padding-left: 8px;
+}
+
+.signin-form .remember .sc-label[data-v-44c03dd9] {
+    line-height: 20px;
+    height: 20px;
+}
+
+.signin-form .forget[data-v-44c03dd9] {
+    padding-right: 8px;
+    text-align: right;
+    line-height: 20px;
+    height: 20px;
+}
+
+.signin-form .divider .label[data-v-44c03dd9] {
+    background-color: #fff;
+}
+
+.login-error[data-v-44c03dd9] {
+    font-size: 14px;
+    text-align: center;
+    color: #FF9800;
+    background-color: rgba(255,87,34,.09);
+    border: 1px solid #FF9800;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 16px;
+}
+
+.back-otp[data-v-44c03dd9] {
+    position: absolute;
+    top: 28px;
+    left: 40px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+    .back-otp[data-v-44c03dd9] svg {
+        fill: #8c8c8c;
+    }
+
+.box[data-v-b5ea9e52] {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.heading[data-v-b5ea9e52] {
+    font-size: 24px;
+    color: #FF9800;
+    margin: 0 0 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.message[data-v-b5ea9e52] {
+    font-size: 13px;
+    color: #8c8c8c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header-inner[data-v-b5ea9e52] {
+    position: relative;
+    border-left: 36px solid transparent;
+}
+
+.header-inner .icon[data-v-b5ea9e52] {
+    display: inline-block;
+    line-height: 0;
+    fill: currentColor;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -36px;
+    line-height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.convert-error[data-v-b5ea9e52] {
+    font-size: 14px;
+    text-align: center;
+    color: #FF9800;
+    background-color: rgba(255,87,34,.09);
+    border: 1px solid #FF9800;
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 16px;
+}
+
+/*.account-container[data-v-fe11aa12] {
+    padding-top: 100px;
+}
+
+@media (min-height:600px) {
+    .account-container[data-v-fe11aa12] {
+        padding-top: 100px;
+    }
+}*/
+
+@media (min-height:600px) and (min-height:800px) {
+    .account-container[data-v-fe11aa12] {
+        padding-top: 200px;
+    }
+}
+
+@media (min-height:600px) and (min-height:800px) and (min-height:1000px) {
+    .account-container[data-v-fe11aa12] {
+        padding-top: 350px;
+    }
+}
+
+.account-container .text[data-v-fe11aa12] {
+    float: left;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 40px;
+    color: #666;
+    max-width: 400px;
+    margin-bottom: 32px;
+}
+
+.account-container .text .title[data-v-fe11aa12] {
+    font-size: 32px;
+    font-weight: 400;
+    color: #FF9800;
+    line-height: 57px;
+}
+
+.account-container .login[data-v-fe11aa12] {
+    float: right;
+}
+
+.account-container .image {
+    float: left;
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://cdngarenanow-a.akamaihd.net/Shopee/Shopee-seller-live-vn/basicpages/static/img/login-img.9347138.png);
+}
+
+.footer[data-v-fe11aa12] {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+}
+
+.footer .badge[data-v-fe11aa12], .footer .badge img[data-v-fe11aa12] {
+    height: 40px;
+}
+
+
+.login 
+{
+    margin: 0 auto;
+}
+
+.signin-panel
+{
+    margin: 0 auto;
+}

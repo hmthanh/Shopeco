@@ -1,0 +1,36 @@
+﻿.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.inner img {
+    position: absolute;
+    width: 40px;
+}
+.info-cont {
+    padding-left: 45px;
+}
+.bottom-cont a img{
+    width:48px;
+}
+.bottom-cont a {
+    padding-right: 30px;
+}
+.contact-info .phonenumber{
+    float: left;
+    margin: 0;
+    background: #eee;
+    padding: 4px 10px;
+    position: relative;
+}
+.contact-info .phonenumber label {
+    float: left;
+    font-weight: normal;
+    margin-top: 8px;
+    padding-right: 5px;
+}
+input[type="text"]:disabled {
+    background: #dddddd;
+}

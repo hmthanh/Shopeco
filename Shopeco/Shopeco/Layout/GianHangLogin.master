@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GianHangLogin.master.cs" Inherits="Layout_GianHang" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Shopeco - Kênh Người bán</title>
+    <link rel="shortcut icon" type="png" href="/Content/UI/image/catalog/logo.png" />
+    <link href="../Content/gianhang/css/app.css" rel="stylesheet" />
+
+    <link href="../Content/gianhang/css/vendor.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-0e26e7651231ccf10703e1d46c62a0de.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-7433f1b20852dc889ecf54e848ed27c8.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-827307a93a445aa408bd9e7930f9798d.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-b662b1f1a3eb8f1d61f0b76983853d2b.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-cff2361d2ceabcb6eb6c18d7f3494f46.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/engine-vendor-110eecc59b552bd3a4991c874ee523b8.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/seller-new.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/shopee-chat.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/gianhang/css/shopinfo.css" rel="stylesheet" />
+    <link href="../Content/UI/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../Content/UI/js/jquery-3.3.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.4.5/ckeditor.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/js/epiceditor.min.js"></script>
+    <script>
+        function format_curency(a) {
+            //a.value = a.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+            var money = a.value.replace(/\,/g, "");
+            a.value = money.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div data-v-fe11aa12="">
+            <div data-v-6c2ea036="" data-v-fe11aa12="" class="header">
+                <div data-v-6c2ea036="" class="wrapper grid">
+                    <div data-v-6c2ea036="" class="col-6">
+                        <i data-v-6c2ea036="" class="logo Shopee-icon">
+                            <img src="/Content/UI/image/catalog/logo.png" style="height: 55px; background-color:white;" />
+                        </i> <span data-v-6c2ea036="" class="brand" style="top: 1px;">Shopeco - Kênh Người bán
+                                </span>
+                    </div>
+                    <div data-v-6c2ea036="" class="col-8">
+                        <div data-v-6c2ea036="" class="home">
+                            <div data-v-6c2ea036="" class="mall">
+                                <a data-v-6c2ea036="" href="/" target="_blank">Trang chủ Shopeco
+                                </a>
+                            </div>
+                            <div data-v-6c2ea036="" class="mall">
+                                <a data-v-6c2ea036="" href="/logout">Đăng xuất</a>
+                            </div>
+                            <div data-v-6c2ea036="" class="sns">
+                                <a data-v-6c2ea036="" href="https://www.facebook.com/ShopeeVN" target="_blank"><i data-v-6c2ea036="" class="Shopee-icon">
+                                    <svg version="1.1" id="Layer3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background: new 0 0 32 32;" xml:space="preserve">
+                                        <path d="M14.2,32V18h-6v-4h6V8c0-4.7,2.4-6,6.5-6c2,0,3,0.2,3.5,0.3V7h-3.5c-2.2,0-2.5,3.4-2.5,5v2h6l-1,4h-5v14H14.2z"></path></svg></i></a>
+                            </div>
+                            <div data-v-6c2ea036="" class="sns">
+                                <a data-v-6c2ea036="" href="https://instagram.com/Shopee_VN" target="_blank"><i data-v-6c2ea036="" class="Shopee-icon">
+                                    <svg version="1.1" id="Layer2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background: new 0 0 32 32;" xml:space="preserve">
+                                        <path d="M26.7,2.2H5.3c-1.7,0-3.2,1.4-3.2,3.2v21.4c0,1.7,1.4,3.2,3.2,3.2h21.4c1.7,0,3.2-1.4,3.2-3.2V5.3 C29.8,3.6,28.4,2.2,26.7,2.2z M11.1,13.9c0.8-1.9,2.7-3.2,4.9-3.2s4,1.3,4.9,3.2c0.3,0.6,0.4,1.4,0.4,2.1c0,2.9-2.4,5.3-5.3,5.3 s-5.3-2.4-5.3-5.3C10.7,15.2,10.9,14.5,11.1,13.9z M26.6,25.6c0,0.6-0.5,1-1,1H6.4c-0.6,0-1-0.5-1-1V13.9h2.3 c-0.2,0.7-0.3,1.4-0.3,2.1c0,4.7,3.8,8.6,8.6,8.6s8.6-3.8,8.6-8.6c0-0.7-0.1-1.4-0.3-2.1h2.3V25.6z M26.8,9.5c0,0.7-0.5,1.2-1.2,1.2 h-3c-0.7,0-1.2-0.5-1.2-1.2v-3c0-0.7,0.5-1.2,1.2-1.2h3c0.7,0,1.2,0.5,1.2,1.2V9.5z"></path></svg></i></a>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="maincontent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <!---->
+        </div>
+        <div class="Shopee-footer">
+            <i class="logo--Shopee Shopee-icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="33 0 32 32" style="enable-background: new 33 0 32 32;" xml:space="preserve">
+                    <path d="M61.7,8.9h-6.2c-0.1-2.7-1.5-8.4-6-8.4c-4.8,0-5.9,6.1-5.9,8.4h-6.2c-1.7,0-1.4,1.7-1.4,1.7l1.2,16.6c0,0-0.1,3.6,3.2,3.7 c0.2,0,17.9,0,18.3,0c3.1-0.2,3.1-3.8,3.1-3.8L63,10.5C63.1,10.6,63.3,8.8,61.7,8.9z M49.6,2c3.9,0.1,4.3,6.3,4.3,6.9h-8.7 C45.2,8.4,45.5,2.1,49.6,2z M54.4,23.3c-0.3,3.3-3.9,3.4-4.5,3.4c-2.8-0.1-4.5-1.6-4.5-1.6l0,0c-0.1-0.1-0.2-0.2-0.2-0.4 c0-0.3,0.2-0.5,0.5-0.5c0.1,0,0.2,0,0.3,0.1l0,0l0,0l0,0c0.2,0.1,1.7,1.3,3.9,1.4c1.6-0.1,3.3-0.8,3.4-2.5c0.2-2.4-3.2-3.3-3.8-3.5 s-4.1-1.1-3.9-3.9c0.1-1.2,1.1-3.2,3.9-3.3c2.5,0,3.8,1.1,3.8,1.1l0,0c0.1,0.1,0.2,0.2,0.2,0.3c0,0.3-0.2,0.5-0.5,0.5 c-0.1,0-0.2,0-0.3-0.1l0,0c0,0-1.5-0.9-3.2-0.9c-1.9,0.1-2.9,1.4-2.9,2.5c0,1.8,2.4,2.5,2.9,2.7C51.8,19.4,54.6,20.3,54.4,23.3z"></path></svg></i>
+            <div class="brand">Shopeco - Kênh người bán</div>
+
+        </div>
+    </div>
+    <script src="../Content/gianhang/js/google-libphonenumber.js"></script>
+    <script src="../Content/gianhang/js/vues.js"></script>
+    <%--<script src="../Content/gianhang/js/app.js"></script>--%>
+
+
+    <script src="../Content/gianhang/js/analytics.js"></script>
+    <%--<script src="../Content/gianhang/js/engine-678f69c48490e725e4c50eedcea48c4d.js"></script>
+    <script src="../Content/gianhang/js/engine-9b36bb808190999ee5810ddc07072b69.js"></script>
+    <script src="../Content/gianhang/js/engine-b519040f42a47d631daa4a3255991b84.js"></script>
+    <script src="../Content/gianhang/js/engine-cd44c03ec7561997b4460117bedd0e3c.js"></script>
+    <script src="../Content/gianhang/js/engine-debb1a67afe8fb8721e3ad77c7c6a5e3.js"></script>
+    <script src="../Content/gianhang/js/engine-vendor-edf7ea3ec3561c7f06b64ecb02eaa792.js"></script>
+    <script src="../Content/gianhang/js/engine-vendor-fd9898f3b691038d6e00bb34c0841ed3.js"></script>--%>
+    <script src="../Content/gianhang/js/raven.min.js"></script>
+    <%--<script src="../Content/gianhang/js/seller.js"></script>--%>
+    <%--<script src="../Content/gianhang/js/vendor.js"></script>--%>
+    <script src="../Content/gianhang/js/bootstrap.js"></script>
+    
+</body>
+</html>

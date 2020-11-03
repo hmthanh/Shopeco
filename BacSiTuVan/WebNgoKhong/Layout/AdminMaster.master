@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Layout_MasterPage2" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bệnh viện</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<%--Theme CSS Custom--%>
+	<%--<link rel="stylesheet" href="UI/css/bootstrap.min.css" />--%>
+	<link rel="stylesheet" href="UI/css/fullcalendar.css" />
+	<link rel="stylesheet" href="UI/css/maruti-style.css" />
+	<link rel="stylesheet" href="UI/css/maruti-media.css" class="skin-color" />
+	<link href="../UI/css/select2.css" rel="stylesheet" />
+	<link href="../UI/css/uniform.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<%--Bootstrap CSS--%>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="UI/css/bootstrap-responsive.min.css" />
+
+	<%--Font Awsome--%>
+
+	<%--JQuery--%>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+
+
+
+	<%--<link href="../../UI/css/datepicker.css" rel="stylesheet" />--%>
+
+	<%-- Bootrap DataTable--%>
+	<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+	<%--<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>--%>
+	<style>
+		.navbar .nav > li > a {
+			float: none;
+			padding: 10px 15px 10px;
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+	<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+	<form runat="server">
+		<!--Header-part-->
+		<div id="header">
+			<h1><a href="dashboard.html"></a></h1>
+			<div id="user-nav" class="navbar navbar-inverse">
+				<ul class="nav">
+					<li class=""><a title="" href="#"><i class="fa fa-user"></i><span class="text">
+						<asp:Literal ID="Literal12" runat="server" Text="<%$Resources:name.language, menuProfile%>" /></span></a></li>
+					<li class="">
+						<asp:LinkButton runat="server" ID="btnChangeLang" OnClick="btnChangeLang_Click" Style="cursor: pointer;" Text="<%$Resources:name.language, lbllanguage %>">
+						</asp:LinkButton>
+					</li>
+					<%--<li class=""><a title="" href="#"><i class="fa fa-cog"></i>&nbsp;<span class="text">Cài đặt</span></a></li>--%>
+					<li class=""><a title="" href="<%=GetRouteUrl("admin_logout", new {}) %>"><i class="fa fa-sign-out"></i>
+						<asp:Literal ID="Literal1" runat="server" Text="<%$Resources:name.language, menuLogout%>" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--close-Header-part-->
+		<div id="sidebar">
+			<a href="#" class="visible-phone"><i class="icon icon-home"></i>
+				<asp:Literal ID="Literal5" runat="server" Text="<%$Resources:name.language, menuIntro%>" /></a><ul>
+					<li id="col1"><a href="<%=GetRouteUrl("editaboutus", new {}) %>"><i class="fa fa-info fa-fw"></i><span>
+						<asp:Literal ID="Literal3" runat="server" Text="<%$Resources:name.language, menuIntro%>" /></span></a></li>
+					<li id="col2"><a href="<%=GetRouteUrl("listpagenotify", new {}) %>"><i class="fa fa-bell fa-fw"></i><span>
+						<asp:Literal ID="Literal4" runat="server" Text="<%$Resources:name.language, menuNoti%>" /></span></a></li>
+					<li id="col3"><a href="<%=GetRouteUrl("statistical", new {}) %>"><i class="fa fa-bar-chart fa-fw"></i><span>
+						<asp:Literal ID="Literal2" runat="server" Text="<%$Resources:name.language, menuStatistic%>" /></span></a></li>
+					<li id="col4"><a href="<%=GetRouteUrl("listpagepromotion", new {}) %>"><i class="fa fa-gift fa-fw"></i><span>
+						<asp:Literal ID="Literal7" runat="server" Text="<%$Resources:name.language, menuPromotion%>" /></span></a></li>
+					<li id="col5"><a href="<%=GetRouteUrl("listdoctor", new {}) %>"><i class="fa fa-user-md fa-fw"></i><span>
+						<asp:Literal ID="Literal8" runat="server" Text="<%$Resources:name.language, menuDoctor%>" /></span></a></li>
+				</ul>
+		</div>
+		<asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
+		<div class="row-fluid">
+			<div id="footer" class="span12">2019 &copy; Copyright by <a href="http://www.xep.vn">XEP company</a> </div>
+		</div>
+
+		<script src="UI/js/excanvas.min.js"></script>
+		<script src="UI/js/jquery.min.js"></script>
+		<script src="UI/js/jquery.ui.custom.js"></script>
+		<%--<script src="UI/js/jquery.flot.min.js"></script>
+    <script src="UI/js/jquery.flot.resize.min.js"></script>--%>
+		<script src="UI/js/jquery.peity.min.js"></script>
+		<script src="UI/js/fullcalendar.min.js"></script>
+		<script src="UI/js/maruti.js"></script>
+		<%--<script src="UI/js/maruti.dashboard.js"></script>--%>
+		<%--<script src="UI/js/maruti.chat.js"></script>--%>
+		<%--<script src="../UI/js/maruti.tables.js"></script>--%>
+		<script src="../UI/js/select2.min.js"></script>
+		<script src="../UI/js/jquery.dataTables.min.js"></script>
+		<script src="../UI/js/bootstrap.min.js"></script>
+		<%--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>--%>
+		<%--<script src="UI/js/bootstrap.min.js"></script>--%>
+		<script type="text/javascript">
+			// This function is called from the pop-up menus to transfer to
+			// a different page. Ignore if the value returned is a null string:
+			function goPage(newURL) {
+
+				// if url is empty, skip the menu dividers and reset the menu selection to default
+				if (newURL != "") {
+
+					// if url is "-", it is this page -- reset the menu:
+					if (newURL == "-") {
+						resetMenu();
+					}
+					// else, send page to designated URL            
+					else {
+						document.location.href = newURL;
+					}
+				}
+			}
+
+			// resets the menu selection upon entry to this page:
+			function resetMenu() {
+				document.gomenu.selector.selectedIndex = 2;
+			}
+		</script>
+		<script src="UI/js/excanvas.min.js"></script>
+		<%--<script src="UI/js/jquery.min.js"></script>--%>
+		<%--<script src="UI/js/jquery.ui.custom.js"></script>--%>
+		<%--<script src="UI/js/jquery.flot.min.js"></script>
+    <script src="UI/js/jquery.flot.resize.min.js"></script>--%>
+		<script src="UI/js/jquery.peity.min.js"></script>
+		<script src="UI/js/fullcalendar.min.js"></script>
+		<%--<script src="UI/js/maruti.js"></script>--%>
+		<%--<script src="UI/js/maruti.dashboard.js"></script>--%>
+		<%--<script src="UI/js/maruti.chat.js"></script>--%>
+		<%--<script src="../UI/js/maruti.tables.js"></script>--%>
+		<script src="../UI/js/select2.min.js"></script>
+
+		<%--<script src="../UI/js/jquery.dataTables.min.js"></script>--%>
+
+		<%--<script src="../UI/js/bootstrap.min.js"></script>--%>
+		<%--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>--%>
+		<%--<script src="UI/js/bootstrap.min.js"></script>--%>
+		<script type="text/javascript">
+			// This function is called from the pop-up menus to transfer to
+			// a different page. Ignore if the value returned is a null string:
+			function goPage(newURL) {
+
+				// if url is empty, skip the menu dividers and reset the menu selection to default
+				if (newURL != "") {
+
+					// if url is "-", it is this page -- reset the menu:
+					if (newURL == "-") {
+						resetMenu();
+					}
+					// else, send page to designated URL            
+					else {
+						document.location.href = newURL;
+					}
+				}
+			}
+
+			// resets the menu selection upon entry to this page:
+			function resetMenu() {
+				document.gomenu.selector.selectedIndex = 2;
+			}
+		</script>
+
+
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+		<%--DatePicker Bootstrap--%>
+		<!-- Date Picker -->
+		<link href="../Assets/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+		<%--<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" />--%>
+		<%--<script src="../../UI/js/bootstrap-datepicker.js"></script>--%>
+		<script src="../Assets/js/bootstrap-datepicker.js"></script>
+		<script src="../Assets/js/bootstrap-datepicker.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#datatableBootstrap').DataTable();
+				$('.datepicker').datepicker({
+					format: 'dd/mm/yyyy',
+					startDate: '-3d',
+					autoclose: true,
+					todayHighlight: true
+				});
+			});
+		</script>
+	</form>
+</body>
+</html>

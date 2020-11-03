@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RaoVat.master.cs" Inherits="Layout_GianHang" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ngộ Không - Kênh Người bán</title>
+    <link rel="shortcut icon" type="png" href="/images/HeThong/wukong.png" />
+    <link href="../RaoVat/Content/css/app.css" rel="stylesheet" />
+    <link href="../RaoVat/Content/css/vendor.css" rel="stylesheet" />
+    <%--<link href="../RaoVat/Content/css/seller-new.css" rel="stylesheet" />--%>
+    <link href="../RaoVat/Content/css/bootstrap.css" rel="stylesheet" />
+    <%--<link href="../Content/css/bootstrap.css" rel="stylesheet" />--%>
+    <link href="../RaoVat/Content/css/shopinfo.css" rel="stylesheet" />
+	<link href="../RaoVat/Content/css/bootstrap/sb-admin-2.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <%--<link href="../RaoVat/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />--%>
+    
+    <script src="../RaoVat/Content/js/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+     <script src="../RaoVat/Content/css/bootstrap/metisMenu.min.js"></script>
+    
+    <script src="../RaoVat/Content/css/bootstrap/sb-admin-2.js"></script>
+    <link href="../RaoVat/Content/css/style.css" rel="stylesheet" />
+    <style>
+        select.form-control:not([size]):not([multiple]) {
+            height: auto;
+        }
+    </style>
+</head>
+<body style="background-color: #dadada;">
+    <form runat="server">
+        <div class="header-top hidden-compact">
+                <div class="container bgGrid ">
+                    <div class="row">
+                        <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                            <div class="hidden-md hidden-sm hidden-xs welcome-msg"> </div>
+                            
+                        </div>
+                        <div class="header-top-right collapsed-block col-lg-5 col-md-4 col-sm-6 col-xs-8">
+                            <ul class="top-link list-inline lang-curr">
+                                
+                                <li class="language">
+                                    <div class="btn-group languages-block ">
+                                            <a href="/" class="btn btn-link ">
+                                                <i class="fa fa-bullhorn"></i>
+                                                <span class="spanheader1">Trang chủ</span>
+                                            </a>
+                                    </div>
+                                </li>
+                                <%--<li class="currency">
+                                    <div class="btn-group currencies-block">
+                                            <a href="/user/product" class="btn btn-link dropdown-toggle">
+                                                <i class="fa fa-user"></i>
+                                                <span class="spanheader1">Kênh người bán</span>
+                                            </a>
+                                    </div>
+                                </li>--%>
+                                
+                                <li id="my_account" class="account" style="display:none"></li>
+                                <li class="language">
+                                    <div class="btn-group languages-block ">
+                                            <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-phone"></i>
+                                                <span class="spanheader1">0963.537.537</span>
+                                            </a>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="app">
+            <div data-v-fe11aa12="">
+                <div data-v-6c2ea036="" data-v-fe11aa12="" class="header">
+                    <div data-v-6c2ea036="" class="container wrapper grid">
+                        <div data-v-6c2ea036="" class="col-3" style="line-height: 56px;">
+                            <a href="<%=GetRouteUrl("raovat", new { })%>" data-v-6c2ea036="" class="logo Shopee-icon" style="margin-left: 50px;">
+                                <img src="/images/HeThong/wukong.png" style="height: 40px;" />
+                                <span data-v-6c2ea036="" class="brand" style="top: 1px;">Kênh rao vặt</span>
+                            </a>
+                        </div>
+                        <div data-v-6c2ea036="" class="col-6 " style="line-height: 56px;">
+                            <div class="row">
+                                <input class="col-sm-9 form-control  " id="txtSearch" type="search" placeholder="Từ khóa" style="width:75%;" runat="server"/>
+                                <asp:LinkButton runat="server" ID="searchKeyword" OnClick="searchKeyword_Click" class="col-sm-2 btn btn-success" type="button"><i class="fa fa-search fa-lg"></i></asp:LinkButton>
+                            </div>
+                         </div>
+                        <div data-v-6c2ea036="" class="col-7">
+                            <div data-v-6c2ea036="" class="home" id="dDangKy" runat="server">
+                                <div data-v-6c2ea036="" id="btnDangKy" class="mall">
+                                    <a data-v-6c2ea036="" href="<%=GetRouteUrl("register", new {}) %>" target="_blank">Đăng ký
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div data-v-6c2ea036="" class="home" id="dDangNhap" runat="server">
+                                <div data-v-6c2ea036="" id="btnDangNhap" class="mall">
+                                    <asp:LinkButton ID="dangNhap" OnClick="dangNhap_Click" Text="Đăng nhập" data-v-6c2ea036 runat="server" />
+                                </div>
+                            </div>
+                            <div data-v-6c2ea036="" class="home" id="dUsername" runat="server">
+                                <div data-v-6c2ea036="" id="" class="mall">
+                                    <asp:LinkButton ID="btnUser" OnClick="btnUser_Click" data-v-6c2ea036 runat="server" />
+                                </div>
+                            </div>
+                            <div data-v-6c2ea036="" class="home">
+                                <div data-v-6c2ea036=""  class="mall">
+                                    <a id="btnDangTin" data-v-6c2ea036="" class="" href="<%=GetRouteUrl("dangtin", new {}) %>" target="_blank">Đăng tin
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <asp:ContentPlaceHolder ID="maincontent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                <div class="container">
+                    <hr class="hidden-sm hidden-xs">
+                    <div class="copyright">
+                        <p class="text-muted text-center">
+                            Copyright © <a>Công Ty TNHH Phần Mềm XEP</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <%--<script src="../RaoVat/Content/js/bootstrap.js"></script>--%>
+	<%--<script src="http://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.4.5/ckeditor.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/epiceditor/0.2.2/js/epiceditor.min.js"></script>--%>
+</body>
+</html>

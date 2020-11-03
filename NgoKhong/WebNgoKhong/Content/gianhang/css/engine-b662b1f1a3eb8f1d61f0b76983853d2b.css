@@ -1,0 +1,1270 @@
+/* new design protocol */
+.wallet-overview-item__balance-container {
+  margin: 30px 24px; }
+
+.wallet-overview-item__balance {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  font-size: 85px;
+  line-height: 1em;
+  color: #ff5722; }
+
+.wallet-overview-item__balance-description {
+  font-size: 19px;
+  color: #4c4c4c;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
+
+.wallet-overview-item__withdraw-panel {
+  height: 165px;
+  padding-right: 32px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .wallet-overview-item__withdraw-panel .Shopee-button {
+    width: 450px; }
+
+.wallet-overview-item__secondary-option {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  background: #fbfbfb;
+  border-top: 1px solid #e8e8e8;
+  color: #404040; }
+  .wallet-overview-item__secondary-option__arrow svg {
+    width: 22px;
+    height: 22px;
+    fill: #bababa; }
+  .wallet-overview-item__secondary-option__title {
+    color: #3B3F53; }
+    .wallet-overview-item__secondary-option__title svg {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 20px;
+      height: 20px;
+      fill: #3B3F53;
+      margin-right: 8px; }
+  .wallet-overview-item__secondary-option + .wallet-overview-item__secondary-option {
+    border-left: 1px solid #e8e8e8; }
+
+.wallet-transaction-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 66px;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px dotted #e8e8e8;
+  padding-right: 20px;
+  width: 100%;
+  cursor: pointer; }
+  .wallet-transaction-item--detail {
+    height: auto;
+    cursor: auto;
+    border: 0; }
+    .wallet-transaction-item--detail .wallet-transaction-item__image {
+      height: 72px; }
+      .wallet-transaction-item--detail .wallet-transaction-item__image svg {
+        width: 48px;
+        height: 48px; }
+      .wallet-transaction-item--detail .wallet-transaction-item__image--width {
+        width: 72px;
+        -webkit-flex: 0 0 72px;
+        -ms-flex: 0 0 72px;
+        flex: 0 0 72px; }
+    .wallet-transaction-item--detail .wallet-transaction-item__primary-description {
+      font-size: 35px;
+      overflow: auto;
+      white-space: normal; }
+    .wallet-transaction-item--detail .wallet-transaction-item__status {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .wallet-transaction-item--detail .wallet-transaction-item__status > div {
+        margin-right: 8px; }
+    .wallet-transaction-item--detail .wallet-transaction-item__amount {
+      color: #ff5722;
+      font-size: 55px;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+  .wallet-transaction-item--header {
+    cursor: default; }
+  .wallet-transaction-item__image {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 40px; }
+    .wallet-transaction-item__image svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff; }
+    .wallet-transaction-item__image--width {
+      width: 40px;
+      -webkit-flex: 0 0 40px;
+      -ms-flex: 0 0 40px;
+      flex: 0 0 40px;
+      margin-right: 24px; }
+    .wallet-transaction-item__image--wallet-order {
+      background: #67beef; }
+    .wallet-transaction-item__image--wallet-income {
+      background: #ff5256; }
+    .wallet-transaction-item__image--wallet-refund {
+      background: #4bb483; }
+    .wallet-transaction-item__image--wallet-withdraw {
+      background: #8183eb; }
+    .wallet-transaction-item__image--wallet-topup {
+      background: #ff5722; }
+    .wallet-transaction-item__image--Shopee-logo-sm {
+      background: #ff5722; }
+  .wallet-transaction-item__date {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .wallet-transaction-item__date--width {
+      -webkit-flex: 0 0 70px;
+      -ms-flex: 0 0 70px;
+      flex: 0 0 70px;
+      text-align: center; }
+  .wallet-transaction-item__description--width {
+    -webkit-flex: 2.5;
+    -ms-flex: 2.5;
+    flex: 2.5;
+    overflow: hidden; }
+  .wallet-transaction-item__primary-description {
+    font-weight: 600;
+    font-size: 15px;
+    color: #4c4c4c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .wallet-transaction-item__secondary-description {
+    font-size: 13px;
+    color: #8c8c8c; }
+  .wallet-transaction-item__month, .wallet-transaction-item__day {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #8d9a99; }
+  .wallet-transaction-item__status--width {
+    -webkit-flex: 0 0 100px;
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    text-align: center; }
+  .wallet-transaction-item__status--pending {
+    color: #ff5722; }
+  .wallet-transaction-item__status--closed {
+    color: #8c8c8c; }
+  .wallet-transaction-item__amount {
+    font-size: 25px;
+    color: #4c4c4c; }
+    .wallet-transaction-item__amount--width {
+      -webkit-flex: 0 0 200px;
+      -ms-flex: 0 0 200px;
+      flex: 0 0 200px;
+      text-align: right; }
+    .wallet-transaction-item__amount--increase {
+      color: #00bfa5; }
+      .wallet-transaction-item__amount--increase:before {
+        content: '+'; }
+  .wallet-transaction-item__balance {
+    font-size: 17px;
+    color: #8C8C8C; }
+  .wallet-transaction-item__month-header {
+    height: 40px;
+    line-height: 40px;
+    color: #8D9A99;
+    padding: 0 24px;
+    font-weight: 600; }
+  .wallet-transaction-item--view-more {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #404040;
+    border-top: 1px #e8e8e8 solid; }
+    .wallet-transaction-item--view-more svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 7px; }
+    .wallet-transaction-item--view-more:hover {
+      background: #fdfdfd; }
+
+.route-portal-sale-detail, .route-portal-income, .route-portal-finance-income {
+  padding-top: 76px !important; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__content, html.orderCODValidation .route-portal-income .cod-validation__content, html.orderCODValidation .route-portal-finance-income .cod-validation__content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    html.orderCODValidation .route-portal-sale-detail .cod-validation__content:after, html.orderCODValidation .route-portal-income .cod-validation__content:after, html.orderCODValidation .route-portal-finance-income .cod-validation__content:after {
+      content: '';
+      display: table;
+      clear: both; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__description, html.orderCODValidation .route-portal-income .cod-validation__description, html.orderCODValidation .route-portal-finance-income .cod-validation__description, html.orderCODValidation .route-portal-sale-detail .cod-validation__charts, html.orderCODValidation .route-portal-income .cod-validation__charts, html.orderCODValidation .route-portal-finance-income .cod-validation__charts {
+    float: left;
+    width: 50%; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__description, html.orderCODValidation .route-portal-income .cod-validation__description, html.orderCODValidation .route-portal-finance-income .cod-validation__description {
+    padding: 0 20px 0 32px;
+    width: calc(50% - 1px);
+    border-right: 1px solid #e8e8e8;
+    font-size: 12px;
+    color: #4c4c4c; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__charts, html.orderCODValidation .route-portal-income .cod-validation__charts, html.orderCODValidation .route-portal-finance-income .cod-validation__charts {
+    margin: 0 20px; }
+    html.orderCODValidation .route-portal-sale-detail .cod-validation__charts:after, html.orderCODValidation .route-portal-income .cod-validation__charts:after, html.orderCODValidation .route-portal-finance-income .cod-validation__charts:after {
+      content: '';
+      display: table;
+      clear: both; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__chart, html.orderCODValidation .route-portal-income .cod-validation__chart, html.orderCODValidation .route-portal-finance-income .cod-validation__chart {
+    float: left;
+    width: 50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__stats, html.orderCODValidation .route-portal-income .cod-validation__stats, html.orderCODValidation .route-portal-finance-income .cod-validation__stats {
+    width: 48px;
+    height: 48px;
+    background: #f6f6f6;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    color: #ff5722;
+    font-size: 17px;
+    font-weight: 600;
+    float: left; }
+    html.orderCODValidation .route-portal-sale-detail .cod-validation__stats svg, html.orderCODValidation .route-portal-income .cod-validation__stats svg, html.orderCODValidation .route-portal-finance-income .cod-validation__stats svg {
+      width: 24px;
+      height: 24px;
+      margin-top: 12px;
+      fill: #bababa; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__stats-desc, html.orderCODValidation .route-portal-income .cod-validation__stats-desc, html.orderCODValidation .route-portal-finance-income .cod-validation__stats-desc {
+    width: calc(100% - 48px - 19px);
+    margin-left: 19px;
+    float: left;
+    color: #4c4c4c; }
+    html.orderCODValidation .route-portal-sale-detail .cod-validation__stats-desc--no-result, html.orderCODValidation .route-portal-income .cod-validation__stats-desc--no-result, html.orderCODValidation .route-portal-finance-income .cod-validation__stats-desc--no-result {
+      color: #8c8c8c;
+      text-transform: capitalize; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__subtitle, html.orderCODValidation .route-portal-income .cod-validation__subtitle, html.orderCODValidation .route-portal-finance-income .cod-validation__subtitle {
+    font-size: 12px;
+    color: #8c8c8c; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__symbol, html.orderCODValidation .route-portal-income .cod-validation__symbol, html.orderCODValidation .route-portal-finance-income .cod-validation__symbol {
+    font-size: 12px; }
+  html.orderCODValidation .route-portal-sale-detail .cod-validation__count, html.orderCODValidation .route-portal-income .cod-validation__count, html.orderCODValidation .route-portal-finance-income .cod-validation__count {
+    color: #00bfa5; }
+  .route-portal-sale-detail .od-body, .route-portal-income .od-body, .route-portal-finance-income .od-body {
+    margin-top: 16px; }
+  .route-portal-sale-detail .next, .route-portal-income .next, .route-portal-finance-income .next, .route-portal-sale-detail .logi-info, .route-portal-income .logi-info, .route-portal-finance-income .logi-info {
+    background-color: #fafafa;
+    margin-top: 8px;
+    padding: 16px 24px;
+    overflow: hidden; }
+    .route-portal-sale-detail .next:after, .route-portal-income .next:after, .route-portal-finance-income .next:after, .route-portal-sale-detail .logi-info:after, .route-portal-income .logi-info:after, .route-portal-finance-income .logi-info:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .route-portal-sale-detail .next .btns, .route-portal-income .next .btns, .route-portal-finance-income .next .btns, .route-portal-sale-detail .logi-info .btns, .route-portal-income .logi-info .btns, .route-portal-finance-income .logi-info .btns {
+      float: right;
+      height: 32px; }
+    .route-portal-sale-detail .next .icon, .route-portal-income .next .icon, .route-portal-finance-income .next .icon, .route-portal-sale-detail .logi-info .icon, .route-portal-income .logi-info .icon, .route-portal-finance-income .logi-info .icon {
+      display: inline-block;
+      padding: 7px;
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 16px; }
+      .route-portal-sale-detail .next .icon svg, .route-portal-income .next .icon svg, .route-portal-finance-income .next .icon svg, .route-portal-sale-detail .logi-info .icon svg, .route-portal-income .logi-info .icon svg, .route-portal-finance-income .logi-info .icon svg {
+        height: 16px;
+        width: 16px;
+        fill: #8c8c8c; }
+    .route-portal-sale-detail .next .instruction, .route-portal-income .next .instruction, .route-portal-finance-income .next .instruction, .route-portal-sale-detail .logi-info .instruction, .route-portal-income .logi-info .instruction, .route-portal-finance-income .logi-info .instruction {
+      vertical-align: middle;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #8c8c8c;
+      height: 32px;
+      line-height: 32px; }
+    .route-portal-sale-detail .next a.logi-toggle, .route-portal-income .next a.logi-toggle, .route-portal-finance-income .next a.logi-toggle, .route-portal-sale-detail .logi-info a.logi-toggle, .route-portal-income .logi-info a.logi-toggle, .route-portal-finance-income .logi-info a.logi-toggle {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      text-align: right;
+      color: #00bfa5; }
+      .route-portal-sale-detail .next a.logi-toggle:hover, .route-portal-income .next a.logi-toggle:hover, .route-portal-finance-income .next a.logi-toggle:hover, .route-portal-sale-detail .logi-info a.logi-toggle:hover, .route-portal-income .logi-info a.logi-toggle:hover, .route-portal-finance-income .logi-info a.logi-toggle:hover {
+        color: rgba(0, 191, 165, 0.9); }
+      .route-portal-sale-detail .next a.logi-toggle svg, .route-portal-income .next a.logi-toggle svg, .route-portal-finance-income .next a.logi-toggle svg, .route-portal-sale-detail .logi-info a.logi-toggle svg, .route-portal-income .logi-info a.logi-toggle svg, .route-portal-finance-income .logi-info a.logi-toggle svg {
+        height: 12px;
+        width: 12px;
+        fill: #00bfa5; }
+  .route-portal-sale-detail .sg-sum, .route-portal-income .sg-sum, .route-portal-finance-income .sg-sum {
+    background: #fff;
+    padding: 16px 24px 16px 24px;
+    border-radius: 4px; }
+    .route-portal-sale-detail .sg-sum.guarantee, .route-portal-income .sg-sum.guarantee, .route-portal-finance-income .sg-sum.guarantee {
+      background: rgba(255, 87, 34, 0.09); }
+      .route-portal-sale-detail .sg-sum.guarantee > .sg-head, .route-portal-income .sg-sum.guarantee > .sg-head, .route-portal-finance-income .sg-sum.guarantee > .sg-head {
+        color: #ff5722; }
+    .route-portal-sale-detail .sg-sum > *, .route-portal-income .sg-sum > *, .route-portal-finance-income .sg-sum > * {
+      text-align: center; }
+    .route-portal-sale-detail .sg-sum > .sg-head, .route-portal-income .sg-sum > .sg-head, .route-portal-finance-income .sg-sum > .sg-head {
+      color: #8c8c8c; }
+    .route-portal-sale-detail .sg-sum > .sg-amount, .route-portal-income .sg-sum > .sg-amount, .route-portal-finance-income .sg-sum > .sg-amount {
+      font-size: 2.4rem;
+      color: #ff5722;
+      font-weight: 600;
+      line-height: 32px;
+      height: 32px;
+      margin: 8px 0 16px 0; }
+    .route-portal-sale-detail .sg-sum .sg-subhead, .route-portal-income .sg-sum .sg-subhead, .route-portal-finance-income .sg-sum .sg-subhead {
+      font-size: 1rem;
+      color: #bababa; }
+    .route-portal-sale-detail .sg-sum .sg-meta, .route-portal-income .sg-sum .sg-meta, .route-portal-finance-income .sg-sum .sg-meta {
+      font-weight: 600; }
+  .route-portal-sale-detail .row, .route-portal-income .row, .route-portal-finance-income .row {
+    margin-bottom: 16px; }
+    .route-portal-sale-detail .row:last-child, .route-portal-income .row:last-child, .route-portal-finance-income .row:last-child {
+      margin-bottom: 0; }
+    .route-portal-sale-detail .row.message, .route-portal-income .row.message, .route-portal-finance-income .row.message {
+      margin-top: 16px; }
+  .route-portal-sale-detail .indent-more, .route-portal-income .indent-more, .route-portal-finance-income .indent-more {
+    margin-left: 36px; }
+  .route-portal-sale-detail .header, .route-portal-income .header, .route-portal-finance-income .header {
+    font-size: 16px;
+    font-weight: 600; }
+    .route-portal-sale-detail .header .icon, .route-portal-income .header .icon, .route-portal-finance-income .header .icon {
+      display: inline-block;
+      margin-right: 16px;
+      font-weight: 600;
+      line-height: 16px; }
+      .route-portal-sale-detail .header .icon svg, .route-portal-income .header .icon svg, .route-portal-finance-income .header .icon svg {
+        width: 16px;
+        height: 16px;
+        fill: #ff5722;
+        position: relative;
+        top: 2px; }
+    .route-portal-sale-detail .header .name, .route-portal-income .header .name, .route-portal-finance-income .header .name {
+      display: inline-block; }
+  .route-portal-sale-detail .detail, .route-portal-income .detail, .route-portal-finance-income .detail {
+    line-height: 24px;
+    color: #666666;
+    margin-top: 8px; }
+    .route-portal-sale-detail .detail .label, .route-portal-income .detail .label, .route-portal-finance-income .detail .label {
+      margin-left: 16px;
+      display: inline-block;
+      vertical-align: middle; }
+    .route-portal-sale-detail .detail .carrier, .route-portal-income .detail .carrier, .route-portal-finance-income .detail .carrier {
+      display: inline-block;
+      vertical-align: middle; }
+  .route-portal-sale-detail .address-detail, .route-portal-income .address-detail, .route-portal-finance-income .address-detail {
+    line-height: 24px; }
+  .route-portal-sale-detail .pricelist .grid, .route-portal-income .pricelist .grid, .route-portal-finance-income .pricelist .grid {
+    margin: 10px 0; }
+  .route-portal-sale-detail .pricelist .col-10, .route-portal-income .pricelist .col-10, .route-portal-finance-income .pricelist .col-10, .route-portal-sale-detail .pricelist .col-7, .route-portal-income .pricelist .col-7, .route-portal-finance-income .pricelist .col-7, .route-portal-sale-detail .pricelist .col-4, .route-portal-income .pricelist .col-4, .route-portal-finance-income .pricelist .col-4 {
+    font-weight: 600;
+    color: #666666; }
+  .route-portal-sale-detail .pricelist .col-7, .route-portal-income .pricelist .col-7, .route-portal-finance-income .pricelist .col-7, .route-portal-sale-detail .pricelist .col-9, .route-portal-income .pricelist .col-9, .route-portal-finance-income .pricelist .col-9 {
+    line-height: 24px; }
+  .route-portal-sale-detail .pricelist .order-total, .route-portal-income .pricelist .order-total, .route-portal-finance-income .pricelist .order-total {
+    color: #ff5722;
+    font-weight: 600;
+    font-size: 18px; }
+    .route-portal-sale-detail .pricelist .order-total .ic-guarantee, .route-portal-income .pricelist .order-total .ic-guarantee, .route-portal-finance-income .pricelist .order-total .ic-guarantee {
+      display: inline-block;
+      position: relative;
+      top: 6px;
+      height: 18px;
+      width: 18px; }
+    .route-portal-sale-detail .pricelist .order-total > .od-p-method, .route-portal-income .pricelist .order-total > .od-p-method, .route-portal-finance-income .pricelist .order-total > .od-p-method {
+      color: #8c8c8c;
+      margin-right: 16px;
+      font-size: 1.2rem;
+      font-weight: 400; }
+  .route-portal-sale-detail .pricelist .od-courier, .route-portal-income .pricelist .od-courier, .route-portal-finance-income .pricelist .od-courier {
+    margin-right: 16px;
+    font-size: 1.2rem;
+    font-weight: 400; }
+  .route-portal-sale-detail .pricelist .notice-board, .route-portal-income .pricelist .notice-board, .route-portal-finance-income .pricelist .notice-board, .route-portal-sale-detail .pricelist .lg-alert, .route-portal-income .pricelist .lg-alert, .route-portal-finance-income .pricelist .lg-alert {
+    color: #8c8c8c;
+    font-size: 0.86em; }
+  .route-portal-sale-detail .divider, .route-portal-income .divider, .route-portal-finance-income .divider {
+    border-bottom: 1px #f6f6f6 solid;
+    height: 4px;
+    margin-bottom: 4px; }
+  .route-portal-sale-detail .od-message, .route-portal-income .od-message, .route-portal-finance-income .od-message {
+    margin-top: 16px; }
+  .route-portal-sale-detail .lg-history, .route-portal-income .lg-history, .route-portal-finance-income .lg-history {
+    transition: height 0.3s ease;
+    position: relative; }
+    .route-portal-sale-detail .lg-history.expanded, .route-portal-income .lg-history.expanded, .route-portal-finance-income .lg-history.expanded {
+      height: auto; }
+    .route-portal-sale-detail .lg-history .lg-log, .route-portal-income .lg-history .lg-log, .route-portal-finance-income .lg-history .lg-log {
+      width: 100%;
+      margin: 0; }
+      .route-portal-sale-detail .lg-history .lg-log:after, .route-portal-income .lg-history .lg-log:after, .route-portal-finance-income .lg-history .lg-log:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .route-portal-sale-detail .lg-history .lg-log.first .icon, .route-portal-income .lg-history .lg-log.first .icon, .route-portal-finance-income .lg-history .lg-log.first .icon {
+        position: relative;
+        background: #00bfa5;
+        box-shadow: 0 0 0 4px rgba(0, 191, 165, 0.25);
+        z-index: 2; }
+      .route-portal-sale-detail .lg-history .lg-log.first .status, .route-portal-income .lg-history .lg-log.first .status, .route-portal-finance-income .lg-history .lg-log.first .status {
+        color: #00bfa5; }
+      .route-portal-sale-detail .lg-history .lg-log.first .line, .route-portal-income .lg-history .lg-log.first .line, .route-portal-finance-income .lg-history .lg-log.first .line {
+        transition: height 0.3s ease;
+        height: 1000px; }
+      .route-portal-sale-detail .lg-history .lg-log .legend, .route-portal-income .lg-history .lg-log .legend, .route-portal-finance-income .lg-history .lg-log .legend {
+        width: 40px;
+        height: 48px;
+        float: left;
+        position: relative;
+        top: 2px; }
+      .route-portal-sale-detail .lg-history .lg-log .icon, .route-portal-income .lg-history .lg-log .icon, .route-portal-finance-income .lg-history .lg-log .icon {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background: #e8e8e8; }
+      .route-portal-sale-detail .lg-history .lg-log .line, .route-portal-income .lg-history .lg-log .line, .route-portal-finance-income .lg-history .lg-log .line {
+        border-left: 2px solid #e8e8e8;
+        height: 1000px;
+        position: relative;
+        left: 5px; }
+      .route-portal-sale-detail .lg-history .lg-log .extra, .route-portal-income .lg-history .lg-log .extra, .route-portal-finance-income .lg-history .lg-log .extra {
+        margin: 10px 0; }
+      .route-portal-sale-detail .lg-history .lg-log .status-log, .route-portal-income .lg-history .lg-log .status-log, .route-portal-finance-income .lg-history .lg-log .status-log {
+        max-width: 350px;
+        float: left; }
+      .route-portal-sale-detail .lg-history .lg-log .status, .route-portal-income .lg-history .lg-log .status, .route-portal-finance-income .lg-history .lg-log .status {
+        font-weight: 600;
+        line-height: 18px;
+        color: #666666; }
+      .route-portal-sale-detail .lg-history .lg-log .time, .route-portal-income .lg-history .lg-log .time, .route-portal-finance-income .lg-history .lg-log .time {
+        font-size: 12px;
+        color: #bababa; }
+  .route-portal-sale-detail .lg-alert, .route-portal-income .lg-alert, .route-portal-finance-income .lg-alert {
+    float: left;
+    color: #00bfa5;
+    margin: 0 10px;
+    position: relative;
+    height: auto;
+    max-width: 300px;
+    padding: 0.5em 10px;
+    line-height: 1.2em;
+    top: -0.5em; }
+    .route-portal-sale-detail .lg-alert:before, .route-portal-income .lg-alert:before, .route-portal-finance-income .lg-alert:before {
+      border-color: transparent #fefbec transparent transparent;
+      border-width: 5px 5px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      margin: -5px 0 0; }
+    .route-portal-sale-detail .lg-alert svg, .route-portal-income .lg-alert svg, .route-portal-finance-income .lg-alert svg {
+      width: 16px;
+      height: 16px;
+      fill: #00bfa5; }
+  .route-portal-sale-detail .od-shipping, .route-portal-income .od-shipping, .route-portal-finance-income .od-shipping {
+    overflow: hidden; }
+  .route-portal-sale-detail .order-notes, .route-portal-income .order-notes, .route-portal-finance-income .order-notes {
+    padding: 20px 24px 16px 24px;
+    margin-bottom: 36px;
+    transition: background-color 250ms; }
+    .route-portal-sale-detail .order-notes .order-notes-right, .route-portal-income .order-notes .order-notes-right, .route-portal-finance-income .order-notes .order-notes-right {
+      padding: 0 6px 0 18px;
+      margin-top: -5px;
+      position: relative; }
+    .route-portal-sale-detail .order-notes .order-notes-title, .route-portal-income .order-notes .order-notes-title, .route-portal-finance-income .order-notes .order-notes-title {
+      color: #ff5722;
+      font-weight: 600;
+      line-height: 24px; }
+    .route-portal-sale-detail .order-notes .order-notes-placeholder, .route-portal-income .order-notes .order-notes-placeholder, .route-portal-finance-income .order-notes .order-notes-placeholder {
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      line-height: 24px;
+      position: absolute;
+      top: 24px; }
+    .route-portal-sale-detail .order-notes .order-notes-limit-tips, .route-portal-income .order-notes .order-notes-limit-tips, .route-portal-finance-income .order-notes .order-notes-limit-tips {
+      color: #ff5722;
+      font-size: 12px;
+      margin-top: 16px;
+      font-style: italic; }
+    .route-portal-sale-detail .order-notes .order-notes-last-update-tips, .route-portal-income .order-notes .order-notes-last-update-tips, .route-portal-finance-income .order-notes .order-notes-last-update-tips {
+      color: #8c8c8c; }
+    .route-portal-sale-detail .order-notes .Shopee-button, .route-portal-income .order-notes .Shopee-button, .route-portal-finance-income .order-notes .Shopee-button {
+      margin-top: 8px; }
+    .route-portal-sale-detail .order-notes .ember-content-editable, .route-portal-income .order-notes .ember-content-editable, .route-portal-finance-income .order-notes .ember-content-editable {
+      border: none;
+      outline: none;
+      line-height: 24px; }
+      .route-portal-sale-detail .order-notes .ember-content-editable:empty, .route-portal-income .order-notes .ember-content-editable:empty, .route-portal-finance-income .order-notes .ember-content-editable:empty {
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: 600; }
+    .route-portal-sale-detail .order-notes .ember-content-editable[contenteditable]:empty:not(:focus):before, .route-portal-income .order-notes .ember-content-editable[contenteditable]:empty:not(:focus):before, .route-portal-finance-income .order-notes .ember-content-editable[contenteditable]:empty:not(:focus):before {
+      content: attr(placeholder); }
+    .route-portal-sale-detail .order-notes.focused, .route-portal-income .order-notes.focused, .route-portal-finance-income .order-notes.focused {
+      background-color: #fff8f6; }
+    .route-portal-sale-detail .order-notes svg, .route-portal-income .order-notes svg, .route-portal-finance-income .order-notes svg {
+      width: 14px;
+      height: 16px;
+      fill: #ff5722; }
+    .route-portal-sale-detail .order-notes .buttons .Shopee-button, .route-portal-income .order-notes .buttons .Shopee-button, .route-portal-finance-income .order-notes .buttons .Shopee-button {
+      margin-left: 10px; }
+  .route-portal-sale-detail .ct-item-product-name, .route-portal-income .ct-item-product-name, .route-portal-finance-income .ct-item-product-name {
+    width: 60%; }
+  .route-portal-sale-detail .ct-item-price, .route-portal-income .ct-item-price, .route-portal-finance-income .ct-item-price {
+    width: 30%; }
+  .route-portal-sale-detail .ct-item-product-qty, .route-portal-income .ct-item-product-qty, .route-portal-finance-income .ct-item-product-qty {
+    width: 10%; }
+  .route-portal-sale-detail .refund-status, .route-portal-income .refund-status, .route-portal-finance-income .refund-status {
+    height: auto !important;
+    text-align: left !important; }
+  .route-portal-sale-detail .refund-amount, .route-portal-income .refund-amount, .route-portal-finance-income .refund-amount {
+    color: #ff5722;
+    font-weight: 600; }
+  .route-portal-sale-detail .reason, .route-portal-income .reason, .route-portal-finance-income .reason {
+    background: rgba(255, 87, 34, 0.09);
+    outline: 0.8rem solid rgba(255, 87, 34, 0.09); }
+  .route-portal-sale-detail .order-item-view-item .ct-item-product-qty, .route-portal-income .order-item-view-item .ct-item-product-qty, .route-portal-finance-income .order-item-view-item .ct-item-product-qty {
+    display: inline-block;
+    float: none; }
+  .route-portal-sale-detail .upload-proof, .route-portal-income .upload-proof, .route-portal-finance-income .upload-proof {
+    height: 100px;
+    line-height: 100px;
+    color: #8c8c8c; }
+    .route-portal-sale-detail .upload-proof:after, .route-portal-income .upload-proof:after, .route-portal-finance-income .upload-proof:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .route-portal-sale-detail .upload-proof svg, .route-portal-income .upload-proof svg, .route-portal-finance-income .upload-proof svg {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      top: 3px; }
+      .route-portal-sale-detail .upload-proof svg.proof-status-1, .route-portal-income .upload-proof svg.proof-status-1, .route-portal-finance-income .upload-proof svg.proof-status-1 {
+        fill: #00bfa5; }
+      .route-portal-sale-detail .upload-proof svg.proof-status-2, .route-portal-income .upload-proof svg.proof-status-2, .route-portal-finance-income .upload-proof svg.proof-status-2 {
+        fill: #ff5722; }
+    .route-portal-sale-detail .upload-proof .Shopee-dropzone, .route-portal-income .upload-proof .Shopee-dropzone, .route-portal-finance-income .upload-proof .Shopee-dropzone {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin-right: 10px;
+      line-height: 40px; }
+      .route-portal-sale-detail .upload-proof .Shopee-dropzone .subtitle, .route-portal-income .upload-proof .Shopee-dropzone .subtitle, .route-portal-finance-income .upload-proof .Shopee-dropzone .subtitle {
+        display: none; }
+  .route-portal-sale-detail .buyer_payment_brief, .route-portal-income .buyer_payment_brief, .route-portal-finance-income .buyer_payment_brief {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    float: right;
+    height: 21px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px; }
+    .route-portal-sale-detail .buyer_payment_brief svg, .route-portal-income .buyer_payment_brief svg, .route-portal-finance-income .buyer_payment_brief svg {
+      width: 24px;
+      height: 12px;
+      stroke: 1px;
+      fill: #8c8c8c; }
+
+.route-portal-income, .route-portal-finance-income {
+  padding-top: 86px; }
+  .route-portal-income .tabs .icon, .route-portal-income .Shopee-subtab .icon, .route-portal-finance-income .tabs .icon, .route-portal-finance-income .Shopee-subtab .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 0.3em; }
+  .route-portal-income .highlight, .route-portal-finance-income .highlight {
+    color: #334898; }
+  .route-portal-income .highlight-primary, .route-portal-finance-income .highlight-primary {
+    color: #ff5722; }
+  .route-portal-income .Shopee-subtab, .route-portal-finance-income .Shopee-subtab {
+    margin-top: 0;
+    font-size: 1.14em;
+    font-weight: 600; }
+  .route-portal-income .no-result img, .route-portal-finance-income .no-result img {
+    width: 52px;
+    height: 52px; }
+  .route-portal-income .card-style, .route-portal-finance-income .card-style {
+    padding: 24px 32px; }
+    .route-portal-income .card-style.od-card, .route-portal-finance-income .card-style.od-card {
+      padding: 20px 40px; }
+      .route-portal-income .card-style.od-card.has-sublist, .route-portal-finance-income .card-style.od-card.has-sublist {
+        padding-right: 56px; }
+    .route-portal-income .card-style.Shopee-subtab-vertical, .route-portal-finance-income .card-style.Shopee-subtab-vertical {
+      padding: 0; }
+  .route-portal-income .sidebar .card-style, .route-portal-finance-income .sidebar .card-style {
+    padding-left: 28px;
+    padding-right: 28px; }
+  .route-portal-income .get-more, .route-portal-finance-income .get-more {
+    font-size: 12px; }
+    .route-portal-income .get-more svg, .route-portal-finance-income .get-more svg {
+      fill: #ff5722;
+      width: 10px;
+      height: 10px; }
+  .route-portal-income .icon.download, .route-portal-finance-income .icon.download {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 100%;
+    background: #6CA6E7; }
+    .route-portal-income .icon.download svg, .route-portal-finance-income .icon.download svg {
+      fill: #fff;
+      width: 11px;
+      height: 11px;
+      margin: 4px; }
+    .route-portal-income .icon.download:hover, .route-portal-finance-income .icon.download:hover {
+      opacity: 0.7; }
+  .route-portal-income .meta-section-heading, .route-portal-finance-income .meta-section-heading {
+    text-transform: uppercase;
+    color: #bababa;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 0.6em;
+    margin-bottom: 0.89em; }
+    .route-portal-income .meta-section-heading .grid.with-gap, .route-portal-finance-income .meta-section-heading .grid.with-gap {
+      margin-left: -8px;
+      margin-right: -8px; }
+      .route-portal-income .meta-section-heading .grid.with-gap > [class*=col], .route-portal-finance-income .meta-section-heading .grid.with-gap > [class*=col] {
+        padding-left: 8px;
+        padding-right: 8px; }
+    .route-portal-income .meta-section-heading .get-more, .route-portal-finance-income .meta-section-heading .get-more {
+      color: #404040; }
+  .route-portal-income .meta-numeric .decimal-point, .route-portal-income .meta-numeric .decimal, .route-portal-income .meta-numeric .currency-symbol, .route-portal-finance-income .meta-numeric .decimal-point, .route-portal-finance-income .meta-numeric .decimal, .route-portal-finance-income .meta-numeric .currency-symbol {
+    font-size: 0.65em; }
+  .route-portal-income .meta-numeric .currency-symbol, .route-portal-finance-income .meta-numeric .currency-symbol {
+    font-weight: 400;
+    /* equals to normal font weight */ }
+  .route-portal-income .meta-numeric .meta-numeric-title, .route-portal-finance-income .meta-numeric .meta-numeric-title {
+    font-weight: 400;
+    /* equals to normal font weight */
+    text-align: right; }
+  .route-portal-income .meta-numeric .meta-numeric-content, .route-portal-finance-income .meta-numeric .meta-numeric-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    max-width: 100%;
+    font-weight: 600;
+    color: #ff5722;
+    font-size: 1.71em;
+    line-height: 1em;
+    text-decoration: none; }
+  .route-portal-income .meta-numeric.bigger .meta-numeric-content, .route-portal-finance-income .meta-numeric.bigger .meta-numeric-content {
+    font-size: 2.5em; }
+  .route-portal-income .meta-numeric [class*=col-] + [class*=col-], .route-portal-finance-income .meta-numeric [class*=col-] + [class*=col-] {
+    padding-left: 6px; }
+  .route-portal-income .meta-section + .meta-section, .route-portal-finance-income .meta-section + .meta-section {
+    margin-top: 1.5em; }
+  .route-portal-income .Shopee-subtab a, .route-portal-finance-income .Shopee-subtab a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .route-portal-income .Shopee-tab-title, .route-portal-finance-income .Shopee-tab-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 8px 12px 7px;
+    border-radius: 8px 8px 0 0;
+    font-size: 14px; }
+    .route-portal-income .Shopee-tab-title + .tabs__tab, .route-portal-finance-income .Shopee-tab-title + .tabs__tab {
+      border-left: none; }
+    .route-portal-income .Shopee-tab-title.active, .route-portal-finance-income .Shopee-tab-title.active {
+      border: 1px solid #e8e8e8;
+      border-bottom-color: transparent; }
+  .route-portal-income .seller-meta, .route-portal-finance-income .seller-meta {
+    width: 100%; }
+    .route-portal-income .seller-meta .avatar, .route-portal-finance-income .seller-meta .avatar {
+      float: left;
+      min-width: 63.5px;
+      width: 63.5px;
+      height: 63.5px; }
+    .route-portal-income .seller-meta .name, .route-portal-finance-income .seller-meta .name {
+      font-size: 1.14em;
+      font-weight: 600; }
+    .route-portal-income .seller-meta .description, .route-portal-finance-income .seller-meta .description {
+      font-size: 0.93em;
+      color: #bababa;
+      margin-top: 0.3em; }
+    .route-portal-income .seller-meta .seller-name, .route-portal-finance-income .seller-meta .seller-name {
+      float: left;
+      margin: 12px 0 0 27px; }
+    .route-portal-income .seller-meta .meta-numeric, .route-portal-finance-income .seller-meta .meta-numeric {
+      padding: 0 8px;
+      margin: 0 0 1.43em; }
+      .route-portal-income .seller-meta .meta-numeric:after, .route-portal-finance-income .seller-meta .meta-numeric:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .route-portal-income .seller-meta .meta-numeric .meta-numeric-content, .route-portal-finance-income .seller-meta .meta-numeric .meta-numeric-content {
+        float: left; }
+      .route-portal-income .seller-meta .meta-numeric .meta-numeric-title, .route-portal-finance-income .seller-meta .meta-numeric .meta-numeric-title {
+        float: right;
+        padding-top: 0.7em; }
+      .route-portal-income .seller-meta .meta-numeric.bigger .meta-numeric-title, .route-portal-finance-income .seller-meta .meta-numeric.bigger .meta-numeric-title {
+        padding-top: 1.4em; }
+  .route-portal-income .bank-account, .route-portal-finance-income .bank-account {
+    padding: 14px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .route-portal-income .bank-account__logo, .route-portal-finance-income .bank-account__logo {
+      border-radius: 20px; }
+    .route-portal-income .bank-account__bank-name, .route-portal-finance-income .bank-account__bank-name {
+      display: none; }
+  .route-portal-income .summary .meta-numeric, .route-portal-finance-income .summary .meta-numeric {
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    white-space: nowrap; }
+  .route-portal-income .summary .meta-numeric-title, .route-portal-income .summary .meta-numeric-content, .route-portal-finance-income .summary .meta-numeric-title, .route-portal-finance-income .summary .meta-numeric-content {
+    display: inline-block;
+    vertical-align: bottom; }
+  .route-portal-income .summary .meta-numeric-title, .route-portal-finance-income .summary .meta-numeric-title {
+    text-transform: uppercase;
+    margin-bottom: 0.2em; }
+  .route-portal-income .summary .meta-section-content, .route-portal-finance-income .summary .meta-section-content {
+    padding-left: 40px; }
+  .route-portal-income .summary .week .meta-numeric-content, .route-portal-finance-income .summary .week .meta-numeric-content {
+    max-width: 150px; }
+  .route-portal-income .summary .month .meta-numeric-content, .route-portal-finance-income .summary .month .meta-numeric-content {
+    max-width: 180px; }
+  .route-portal-income .summary .month .meta-numeric-content, .route-portal-finance-income .summary .month .meta-numeric-content {
+    max-width: 177px; }
+  .route-portal-income .search .with-gap, .route-portal-finance-income .search .with-gap {
+    margin-left: -8px;
+    margin-right: -8px; }
+    .route-portal-income .search .with-gap > [class*=col], .route-portal-finance-income .search .with-gap > [class*=col] {
+      padding-left: 8px;
+      padding-right: 8px; }
+  .route-portal-income .search .Shopee-dropdown .scs-dropdown,
+  .route-portal-income .search .Shopee-datepicker input,
+  .route-portal-income .search .Shopee-dropdown-item.preview, .route-portal-finance-income .search .Shopee-dropdown .scs-dropdown,
+  .route-portal-finance-income .search .Shopee-datepicker input,
+  .route-portal-finance-income .search .Shopee-dropdown-item.preview {
+    height: 32px;
+    line-height: 32px; }
+  .route-portal-income .search .Shopee-dropdown .scs-dropdown, .route-portal-finance-income .search .Shopee-dropdown .scs-dropdown {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .route-portal-income .Shopee-pagination, .route-portal-finance-income .Shopee-pagination {
+    text-align: center; }
+  .route-portal-income .od-card .header, .route-portal-finance-income .od-card .header {
+    margin-top: 0.625em; }
+    .route-portal-income .od-card .header .name, .route-portal-finance-income .od-card .header .name {
+      font-size: 1em;
+      line-height: 1.25em; }
+    .route-portal-income .od-card .header + .pricelist, .route-portal-finance-income .od-card .header + .pricelist {
+      margin: 10px 0 0 36px;
+      border-top: 1px #f6f6f6 solid; }
+      .route-portal-income .od-card .header + .pricelist .amount, .route-portal-finance-income .od-card .header + .pricelist .amount {
+        font-weight: 600; }
+  .route-portal-income .order-item-view-item .item + .item, .route-portal-finance-income .order-item-view-item .item + .item {
+    margin-top: 0.72em; }
+  .route-portal-income .order-item-view-item .ct-item-imgs, .route-portal-finance-income .order-item-view-item .ct-item-imgs {
+    width: 48px;
+    height: 48px; }
+  .route-portal-income .order-item-view-item .ct-item-product, .route-portal-finance-income .order-item-view-item .ct-item-product {
+    height: 48px;
+    padding: 5px 0 0 64px;
+    border-bottom: none; }
+  .route-portal-income .order-item-view-item .ct-item-product-name, .route-portal-finance-income .order-item-view-item .ct-item-product-name {
+    width: 60%; }
+    .route-portal-income .order-item-view-item .ct-item-product-name a, .route-portal-finance-income .order-item-view-item .ct-item-product-name a {
+      color: #666666; }
+  .route-portal-income .order-item-view-item .ct-item-price, .route-portal-finance-income .order-item-view-item .ct-item-price {
+    width: 40%; }
+  .route-portal-income .order-item-view-item .ct-item-meta, .route-portal-income .order-item-view-item .ct-item-product-qty, .route-portal-finance-income .order-item-view-item .ct-item-meta, .route-portal-finance-income .order-item-view-item .ct-item-product-qty {
+    clear: left;
+    margin-top: 0.5em; }
+  .route-portal-income .order-item-view-item .ct-item-meta + .ct-item-product-qty, .route-portal-finance-income .order-item-view-item .ct-item-meta + .ct-item-product-qty {
+    clear: none; }
+  .route-portal-income .order-item-view-item .ct-item-meta, .route-portal-finance-income .order-item-view-item .ct-item-meta {
+    width: 100%; }
+  .route-portal-income .order-item-view-item.collapsed .item, .route-portal-finance-income .order-item-view-item.collapsed .item {
+    float: left;
+    width: auto; }
+  .route-portal-income .pricelist .shipping-fee, .route-portal-finance-income .pricelist .shipping-fee {
+    margin-top: 1.2em; }
+  .route-portal-income .pricelist .ct-item-meta, .route-portal-income .pricelist .ct-item-product-qty, .route-portal-finance-income .pricelist .ct-item-meta, .route-portal-finance-income .pricelist .ct-item-product-qty {
+    float: left;
+    width: auto;
+    margin-right: 16px;
+    text-align: left; }
+  .route-portal-income .pricelist .col-10, .route-portal-finance-income .pricelist .col-10 {
+    font-weight: 400;
+    /* equals to normal font weight */
+    color: #404040; }
+  .route-portal-income .pricelist .ct-item-product-qty, .route-portal-finance-income .pricelist .ct-item-product-qty {
+    font-size: 12px; }
+  .route-portal-income th, .route-portal-finance-income th {
+    text-align: left; }
+    .route-portal-income th.transaction-order, .route-portal-finance-income th.transaction-order {
+      padding-left: 56px; }
+  .route-portal-income th, .route-portal-income td, .route-portal-finance-income th, .route-portal-finance-income td {
+    padding: 6px 8px 6px 0;
+    overflow: visible; }
+  .route-portal-income th, .route-portal-finance-income th {
+    padding-top: 2px;
+    padding-bottom: 2px; }
+  .route-portal-income table .content, .route-portal-income table .meta, .route-portal-finance-income table .content, .route-portal-finance-income table .meta {
+    width: 185px;
+    max-width: 185px; }
+  .route-portal-income table .transaction-order, .route-portal-finance-income table .transaction-order {
+    width: 177px;
+    white-space: nowrap; }
+    .route-portal-income table .transaction-order .first-item-img, .route-portal-finance-income table .transaction-order .first-item-img {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      background-size: cover;
+      border: 1px #e8e8e8 solid;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-right: 8px; }
+    .route-portal-income table .transaction-order .order-id, .route-portal-finance-income table .transaction-order .order-id {
+      display: inline-block;
+      vertical-align: middle; }
+  .route-portal-income table .transaction-buyer, .route-portal-finance-income table .transaction-buyer {
+    max-width: 110px;
+    white-space: nowrap; }
+  .route-portal-income table .transaction-amount, .route-portal-finance-income table .transaction-amount {
+    max-width: 120px; }
+  .route-portal-income table .transaction-escrow-time, .route-portal-income table .transaction-creation-time, .route-portal-finance-income table .transaction-escrow-time, .route-portal-finance-income table .transaction-creation-time {
+    width: 100px;
+    max-width: 100px; }
+  .route-portal-income table .order-item-view-item .ct-item-product, .route-portal-finance-income table .order-item-view-item .ct-item-product {
+    padding-top: 0; }
+  .route-portal-income table .order-item-view-item .ct-item-product-name, .route-portal-income table .order-item-view-item .ct-item-meta, .route-portal-finance-income table .order-item-view-item .ct-item-product-name, .route-portal-finance-income table .order-item-view-item .ct-item-meta {
+    float: none;
+    width: 100%; }
+  .route-portal-income table .order-item-view-item .ct-item-return, .route-portal-finance-income table .order-item-view-item .ct-item-return {
+    display: none; }
+  .route-portal-income .no-result, .route-portal-finance-income .no-result {
+    margin-bottom: 110px; }
+    .route-portal-income .no-result--small, .route-portal-finance-income .no-result--small {
+      margin: 40px 0 20px; }
+    .route-portal-income .no-result__text, .route-portal-finance-income .no-result__text {
+      color: #666666;
+      font-size: 1em;
+      margin-top: 15px; }
+  .route-portal-income .download-list, .route-portal-finance-income .download-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #666666; }
+    .route-portal-income .download-list li, .route-portal-finance-income .download-list li {
+      padding: 4px 0;
+      line-height: 20px; }
+      .route-portal-income .download-list li:after, .route-portal-finance-income .download-list li:after {
+        content: '';
+        display: table;
+        clear: both; }
+    .route-portal-income .download-list a, .route-portal-finance-income .download-list a {
+      color: #666666; }
+      .route-portal-income .download-list a:hover, .route-portal-finance-income .download-list a:hover {
+        color: #ff5722; }
+    .route-portal-income .download-list .icon, .route-portal-finance-income .download-list .icon {
+      float: right; }
+  .route-portal-income .invoice .sidebar-section-header .icon svg, .route-portal-finance-income .invoice .sidebar-section-header .icon svg {
+    width: 36px;
+    height: 36px;
+    margin: 6px 0 0;
+    fill: #00bfa5; }
+  .route-portal-income .sidebar-section-header, .route-portal-finance-income .sidebar-section-header {
+    font-size: 1.14em;
+    font-weight: 600; }
+    .route-portal-income .sidebar-section-header .icon, .route-portal-finance-income .sidebar-section-header .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      border-radius: 100%;
+      margin-right: 16px; }
+      .route-portal-income .sidebar-section-header .icon svg, .route-portal-finance-income .sidebar-section-header .icon svg {
+        margin: 12px;
+        width: 24px;
+        height: 24px;
+        fill: #fff; }
+  .route-portal-income table.statements, .route-portal-finance-income table.statements {
+    width: 100%;
+    margin-top: 16px; }
+    .route-portal-income table.statements td .title, .route-portal-finance-income table.statements td .title {
+      font-weight: 600; }
+    .route-portal-income table.statements td small, .route-portal-finance-income table.statements td small {
+      color: #8c8c8c; }
+
+.VN .route-portal-income .meta-numeric-content, .TH .route-portal-income .meta-numeric-content, .ID .route-portal-income .meta-numeric-content, .TW .route-portal-income .meta-numeric-content {
+  font-size: 1.43em; }
+
+.VN .route-portal-income .bigger .meta-numeric-content, .TH .route-portal-income .bigger .meta-numeric-content, .ID .route-portal-income .bigger .meta-numeric-content, .TW .route-portal-income .bigger .meta-numeric-content {
+  font-size: 2.1em; }
+
+.VN .route-portal-income .seller-meta .meta-numeric-title, .TH .route-portal-income .seller-meta .meta-numeric-title, .ID .route-portal-income .seller-meta .meta-numeric-title, .TW .route-portal-income .seller-meta .meta-numeric-title {
+  padding-top: 0; }
+
+.VN .route-portal-income .seller-meta .bigger .meta-numeric-title, .TH .route-portal-income .seller-meta .bigger .meta-numeric-title, .ID .route-portal-income .seller-meta .bigger .meta-numeric-title, .TW .route-portal-income .seller-meta .bigger .meta-numeric-title {
+  padding-top: 0.9em; }
+
+.wallet-cards {
+  margin-left: -12px;
+  margin-right: -12px; }
+  .wallet-cards > [class*=col] {
+    padding-left: 12px;
+    padding-right: 12px; }
+  .wallet-cards .wallet-view-item {
+    margin-bottom: 24px; }
+
+.route-portal-wallet__wrapper, .route-portal-finance-wallet__wrapper {
+  padding: 30px 80px;
+  position: relative; }
+  .route-portal-wallet__wrapper:after, .route-portal-finance-wallet__wrapper:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .route-portal-wallet__wrapper__title, .route-portal-finance-wallet__wrapper__title {
+    font-size: 18px; }
+  .route-portal-wallet__wrapper__body, .route-portal-finance-wallet__wrapper__body {
+    margin: 20px auto;
+    padding: 60px 0;
+    border-top: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    position: relative; }
+  .route-portal-wallet__wrapper__fee-description, .route-portal-finance-wallet__wrapper__fee-description {
+    position: absolute;
+    top: -1px;
+    background: #FFF6E1;
+    line-height: 40px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 0 15px; }
+    .route-portal-wallet__wrapper__fee-description svg, .route-portal-finance-wallet__wrapper__fee-description svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+      margin: 0 10px; }
+    .route-portal-wallet__wrapper__fee-description:after, .route-portal-finance-wallet__wrapper__fee-description:after {
+      content: '?';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      vertical-align: middle;
+      line-height: 16px;
+      text-align: center;
+      margin-left: 10px; }
+  .route-portal-wallet__wrapper__chance-tip, .route-portal-finance-wallet__wrapper__chance-tip {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e8e8e8;
+    padding: 0 15px;
+    font-size: 12px;
+    color: #808080;
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 1px; }
+    .route-portal-wallet__wrapper__chance-tip span, .route-portal-finance-wallet__wrapper__chance-tip span {
+      color: #ff5722; }
+    .route-portal-wallet__wrapper__chance-tip:before, .route-portal-finance-wallet__wrapper__chance-tip:before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 6px;
+      border-color: transparent;
+      position: absolute;
+      top: 14px;
+      border-left-color: #e8e8e8;
+      right: -6px; }
+    .route-portal-wallet__wrapper__chance-tip:after, .route-portal-finance-wallet__wrapper__chance-tip:after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 6px;
+      border-color: transparent;
+      position: absolute;
+      top: 14px;
+      border-left-color: white;
+      right: -5px; }
+  .route-portal-wallet__wrapper--pending:before, .route-portal-wallet__wrapper--cancelled:before, .route-portal-finance-wallet__wrapper--pending:before, .route-portal-finance-wallet__wrapper--cancelled:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(25% + 72px);
+    z-index: 0;
+    background: rgba(254, 251, 236, 0.3);
+    border-left: 1px dotted #e8e8e8; }
+  .route-portal-wallet__wrapper .card-style__edge-hole, .route-portal-finance-wallet__wrapper .card-style__edge-hole {
+    right: calc(25% + 72px - 4px); }
+
+.route-portal-wallet__filter-type-group, .route-portal-finance-wallet__filter-type-group {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  .route-portal-wallet__filter-type-group .Shopee-radio-button.button, .route-portal-finance-wallet__filter-type-group .Shopee-radio-button.button {
+    margin-right: 32px; }
+    .route-portal-wallet__filter-type-group .Shopee-radio-button.button:last-child, .route-portal-finance-wallet__filter-type-group .Shopee-radio-button.button:last-child {
+      margin-right: 0; }
+  .route-portal-wallet__filter-type-group .Shopee-radio-button + .Shopee-radio-button, .route-portal-finance-wallet__filter-type-group .Shopee-radio-button + .Shopee-radio-button {
+    margin-left: 0; }
+
+.route-portal-wallet__transactions-header, .route-portal-finance-wallet__transactions-header {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .route-portal-wallet__transactions-header:after, .route-portal-finance-wallet__transactions-header:after {
+    display: none; }
+
+.route-portal-wallet__transaction-detail, .route-portal-finance-wallet__transaction-detail {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.route-portal-wallet__transaction-field, .route-portal-finance-wallet__transaction-field {
+  font-size: 1.5rem;
+  min-height: 35px;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+  .route-portal-wallet__transaction-field .user-view-item, .route-portal-finance-wallet__transaction-field .user-view-item {
+    margin-right: 30px; }
+    .route-portal-wallet__transaction-field .user-view-item__username, .route-portal-finance-wallet__transaction-field .user-view-item__username {
+      font-weight: 600;
+      color: inherit; }
+  .route-portal-wallet__transaction-field__label, .route-portal-finance-wallet__transaction-field__label {
+    color: #8c8c8c; }
+  .route-portal-wallet__transaction-field__content__order-link, .route-portal-finance-wallet__transaction-field__content__order-link {
+    display: block;
+    margin-right: 30px;
+    line-height: 35px; }
+    .route-portal-wallet__transaction-field__content__order-link:not(:last-child):after, .route-portal-finance-wallet__transaction-field__content__order-link:not(:last-child):after {
+      content: '\002C';
+      display: inline-block; }
+  .route-portal-wallet__transaction-field--header, .route-portal-finance-wallet__transaction-field--header {
+    color: #8c8c8c;
+    font-size: 1.3rem;
+    border-bottom-style: solid; }
+  .route-portal-wallet__transaction-field--users, .route-portal-wallet__transaction-field--ordersns, .route-portal-finance-wallet__transaction-field--users, .route-portal-finance-wallet__transaction-field--ordersns {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .route-portal-wallet__transaction-field--users .route-portal-wallet__transaction-field__label, .route-portal-wallet__transaction-field--ordersns .route-portal-wallet__transaction-field__label, .route-portal-finance-wallet__transaction-field--users .route-portal-wallet__transaction-field__label, .route-portal-finance-wallet__transaction-field--ordersns .route-portal-wallet__transaction-field__label {
+      line-height: 35px; }
+
+.route-portal-wallet__transaction-fields, .route-portal-finance-wallet__transaction-fields {
+  margin-top: 56px; }
+  .route-portal-wallet__transaction-fields + .route-portal-wallet__transaction-fields, .route-portal-finance-wallet__transaction-fields + .route-portal-wallet__transaction-fields, .route-portal-wallet__transaction-fields + .route-portal-finance-wallet__transaction-fields, .route-portal-finance-wallet__transaction-fields + .route-portal-finance-wallet__transaction-fields {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 16px;
+    margin-top: 16px; }
+
+.route-portal-wallet__transaction-fields--aside .route-portal-wallet__transaction-field, .route-portal-finance-wallet__transaction-fields--aside .route-portal-wallet__transaction-field, .route-portal-wallet__transaction-fields--aside .route-portal-finance-wallet__transaction-field, .route-portal-finance-wallet__transaction-fields--aside .route-portal-finance-wallet__transaction-field {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .route-portal-wallet__transaction-fields--aside .route-portal-wallet__transaction-field__label, .route-portal-finance-wallet__transaction-fields--aside .route-portal-wallet__transaction-field__label, .route-portal-wallet__transaction-fields--aside .route-portal-finance-wallet__transaction-field__label, .route-portal-finance-wallet__transaction-fields--aside .route-portal-finance-wallet__transaction-field__label {
+    color: #404040; }
+
+.route-portal-wallet__filter-container, .route-portal-finance-wallet__filter-container {
+  border-top: 1px solid #f4f4f4;
+  background: #fafafa; }
+  .route-portal-wallet__filter-container .Shopee-radio-button, .route-portal-finance-wallet__filter-container .Shopee-radio-button {
+    background: transparent; }
+
+.route-portal-wallet__filter, .route-portal-finance-wallet__filter {
+  padding: 24px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .route-portal-wallet__filter + .route-portal-wallet__filter, .route-portal-finance-wallet__filter + .route-portal-wallet__filter, .route-portal-wallet__filter + .route-portal-finance-wallet__filter, .route-portal-finance-wallet__filter + .route-portal-finance-wallet__filter {
+    margin-top: -36px; }
+
+.route-portal-wallet__filter-item, .route-portal-finance-wallet__filter-item {
+  vertical-align: top; }
+  .route-portal-wallet__filter-item .Shopee-dropdown-item.preview, .route-portal-finance-wallet__filter-item .Shopee-dropdown-item.preview {
+    padding-top: 3px;
+    padding-bottom: 4px; }
+  .route-portal-wallet__filter-item--active, .route-portal-finance-wallet__filter-item--active {
+    border-radius: 2px;
+    background: #8c8c8c; }
+    .route-portal-wallet__filter-item--active .Shopee-dropdown-period-picker__preview, .route-portal-finance-wallet__filter-item--active .Shopee-dropdown-period-picker__preview {
+      color: #fff; }
+      .route-portal-wallet__filter-item--active .Shopee-dropdown-period-picker__preview svg, .route-portal-finance-wallet__filter-item--active .Shopee-dropdown-period-picker__preview svg {
+        fill: #fff; }
+
+.route-portal-wallet__export-button, .route-portal-finance-wallet__export-button {
+  font-size: 1.7rem; }
+
+.route-portal-wallet__view-all-transaction, .route-portal-finance-wallet__view-all-transaction {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 72px;
+  font-size: 15px;
+  padding: 0 24px;
+  background: #fbfbfb;
+  border-top: 1px solid #e8e8e8;
+  color: #404040; }
+  .route-portal-wallet__view-all-transaction svg, .route-portal-finance-wallet__view-all-transaction svg {
+    width: 16px;
+    height: 16px;
+    fill: #404040;
+    margin-right: 8px; }
+
+.route-portal-wallet-withdraw__label {
+  margin-left: 20%;
+  text-align: right;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.route-portal-wallet-withdraw__input--amount {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .route-portal-wallet-withdraw__input--amount .Shopee-textbox {
+    width: 220px; }
+  .route-portal-wallet-withdraw__input--amount .edit-description {
+    margin-top: 10px;
+    font-size: 1em; }
+    .route-portal-wallet-withdraw__input--amount .edit-description .Shopee-button {
+      margin-left: 8px; }
+  .route-portal-wallet-withdraw__input--amount-withdraw-all {
+    margin-left: 10px;
+    text-decoration: underline; }
+
+.route-portal-wallet-withdraw__input--account .bank-account {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+  background: #fff; }
+  .route-portal-wallet-withdraw__input--account .bank-account__logo {
+    padding: 0;
+    width: 32px;
+    height: 32px; }
+  .route-portal-wallet-withdraw__input--account .bank-account__bank-name {
+    font-size: 1.7rem;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .route-portal-wallet-withdraw__input--account .bank-account__number {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+
+.route-portal-wallet-withdraw__input--account .Shopee-dropdown .scs-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  padding: 0;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fafafa; }
+  .route-portal-wallet-withdraw__input--account .Shopee-dropdown .scs-dropdown svg {
+    position: static;
+    margin: 0 6px;
+    fill: #666666; }
+  .route-portal-wallet-withdraw__input--account .Shopee-dropdown .scs-dropdown .bank-account {
+    padding: 0 16px 0 4px; }
+
+.route-portal-wallet-withdraw__input--account .Shopee-dropdown .Shopee-menu .bank-account {
+  padding-left: 22px;
+  padding-right: 22px; }
+
+.route-portal-wallet-withdraw__input--fee-before {
+  color: #bababa;
+  text-decoration: line-through; }
+
+.route-portal-wallet-withdraw__input--fee-after {
+  margin-left: 3px; }
+
+.route-portal-wallet-withdraw__input--fee-description {
+  margin-left: 10px; }
+
+.route-portal-wallet-withdraw__input--count-to-bank {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #e84f20; }
+
+.route-portal-wallet-withdraw__input--fee-value {
+  line-height: 40px; }
+
+.route-portal-wallet-withdraw__success-subtitle {
+  font-size: 1.4rem;
+  color: #666666; }

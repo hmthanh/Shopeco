@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layout/GianHang.master" AutoEventWireup="true" CodeFile="MainBoard.master.cs" Inherits="Layout_MainBoard" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="Server">
+    
+    <div class="wrapper" style="background: #fafafa; padding-top: 23px;">
+        <div class="grid">
+            <div class="route-settings__menu">
+                <div id="ember4554" class="ember-view">
+                    <div class="card-panel">
+                        <div class="card-panel__section">
+                            <div class="card-panel__title">Shop</div>
+                            <div id="ember4555" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_shopinfo",new { }) %>" id="ember4556" class="shop-setting-link__link ember-view">
+                                    <div style="background: #49cbdd;" class="shop-setting-link__icon">
+                                        <svg style="fill: #49cbdd;" viewBox="0 0 32 32">
+                                            <path d="M23.9 12.9l-1.6-1.6 6.2-6.2 1.6 1.6-6.2 6.2zM32 4.8l-1.6-1.6-1 1L31 5.8l1-1zM19.7 15.6l2.6-1.4-1.3-1.3-1.3 2.7zm8.6-4v16.3c0 .9-.7 1.6-1.6 1.6H1.6c-.9 0-1.6-.7-1.6-1.6V6.2c0-.9.7-1.6 1.6-1.6h24.2l-2 2H2v11.9l5.6-3.8 7.2 6.1 6.7-3 4.7 4.1v-8.4l2.1-1.9zm-2 15.9v-2.9l-5.1-4.4-6.7 3-7-6L2 21v6.5h24.3z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Thông tin</div>
+                                    <div style="background: #49cbdd;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                            <div id="ember4557" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_shopproduct",new { }) %>" id="ember4558" class="shop-setting-link__link ember-view">
+                                    <div style="background: #6897d6;" class="shop-setting-link__icon">
+                                        <svg style="fill: #6897d6;" viewBox="0 0 32 32">
+                                            <path d="M31 23.5h-3.1c.1.3.1.7.1 1 0 2.8-2.2 5-5 5s-5-2.2-5-5c0-.4 0-.7.1-1h-5.2c.1.3.1.7.1 1 0 2.8-2.2 5-5 5s-5-2.2-5-5c0-.4 0-.7.1-1H3c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v2h7c.6 0 1 .4 1 1l2 12c0 .5-.4 1-1 1zm-8 4c1.7 0 3-1.3 3-3 0-1.6-1.3-3-3-3s-3 1.3-3 3c0 1.6 1.3 3 3 3zm-15 0c1.7 0 3-1.3 3-3 0-1.6-1.3-3-3-3s-3 1.3-3 3c0 1.6 1.3 3 3 3zm12-19c0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1 .9-1.2 2.3-2 4-2 1.6 0 3.1.8 4 2h7c.3-.4.6-.7 1-1v-12zm2 3v4h6.8l-.8-4h-6zm7.2 6H22v2.1c.3-.1.7-.1 1-.1 1.6 0 3.1.8 4 2h3l-.8-4z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Sản phẩm<!----></div>
+                                    <div style="background: #6897d6;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                            
+                            <div id="ember4561" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_saleorder",new { }) %>" id="ember4562" class="shop-setting-link__link ember-view">
+                                    <div style="background: #62b450;" class="shop-setting-link__icon">
+                                        <svg style="fill: #62b450;" viewBox="0 0 32 32">
+                                            <path d="M16 4.83l3.18 7 .48 1.06 1.16.11 6.76.61L22.27 19l-.75.75.2 1 1.38 7.19-6.1-3.72-1-.64-1 .64-6.15 3.7 1.42-7.16.21-1-.76-.76-5.31-5.39 6.77-.61 1.16-.11.48-1.06 3.18-7M16 0l-5 11-11 1 8.3 8.37L6 32l10-6.07L26 32l-2.31-11.63L32 12l-11-1-5-11z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Đơn bán hàng<!----></div>
+                                    <div style="background: #62b450;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <%--<div class="card-panel__section">
+                            <div class="card-panel__title">Cài đặt</div>
+                            <div id="ember4569" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_shopinfo",new { }) %>" id="ember4570" class="shop-setting-link__link ember-view">
+                                    <div style="background: #8d9a99;" class="shop-setting-link__icon">
+                                        <svg style="fill: #8d9a99;" viewBox="0 0 32 32">
+                                            <path d="M31.3 16c0 2-1.5 3.6-3.5 3.8-.2.7-.5 1.2-.8 1.9 1.2 1.5 1.2 3.7-.2 5.2-1.4 1.4-3.6 1.4-5.2.2-.6.3-1.2.6-1.9.8-.2 2-1.8 3.5-3.8 3.5s-3.6-1.5-3.8-3.5c-.7-.2-1.2-.5-1.9-.8-1.5 1.2-3.7 1.2-5.2-.2-1.4-1.4-1.4-3.6-.2-5.2-.3-.6-.6-1.2-.8-1.9C2.3 19.6.7 18 .7 16s1.5-3.6 3.5-3.8c.2-.7.5-1.2.8-1.9-1.2-1.5-1.2-3.7.2-5.1s3.6-1.4 5.2-.2c.6-.3 1.2-.6 1.9-.8.1-2 1.7-3.5 3.7-3.5s3.6 1.5 3.8 3.5c.7.2 1.2.5 1.9.8 1.5-1.2 3.7-1.2 5.2.2 1.4 1.4 1.4 3.6.2 5.2.3.6.6 1.2.8 1.9 1.8.1 3.4 1.7 3.4 3.7zm-5-1.9c-.3-1.4-.9-2.9-1.7-4l.9-.9c.8-.8.8-1.9 0-2.7s-1.9-.8-2.7 0l-.9.9c-1.1-.9-2.6-1.4-4-1.7V4.5c0-1.1-.9-1.9-1.9-1.9s-1.9.9-1.9 1.9v1.1c-1.4.3-2.9.9-4 1.7l-.9-.7c-.8-.8-1.9-.8-2.7 0s-.8 1.9 0 2.7l.9.9c-.9 1.1-1.4 2.6-1.7 4H4.5c-1.1 0-1.9.9-1.9 1.9S3.5 18 4.5 18h1.1c.3 1.4.9 2.9 1.7 4l-.9.9c-.8.8-.8 1.9 0 2.7s1.9.8 2.7 0l.9-.9c1.1.9 2.6 1.4 4 1.7v1.1c0 1.1.9 1.9 1.9 1.9s1.9-.9 1.9-1.9v-1.1c1.4-.3 2.9-.9 4-1.7l.9.9c.8.8 1.9.8 2.7 0s.8-1.9 0-2.7l-.9-.9c.9-1.1 1.4-2.6 1.7-4h1.1c1.1 0 1.9-.9 1.9-1.9s-.9-1.9-1.9-1.9h-1zM16 21.7c-3.2 0-5.7-2.6-5.7-5.7s2.6-5.7 5.7-5.7 5.7 2.6 5.7 5.7-2.5 5.7-5.7 5.7zm0-9.5c-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8 3.8-1.7 3.8-3.8-1.7-3.8-3.8-3.8z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Thiết lập Shop<!----></div>
+                                    <div style="background: #8d9a99;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                            <div id="ember4571" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_shopinfo",new { }) %>" id="ember4572" class="shop-setting-link__link ember-view">
+                                    <div style="background: #5c6bc0;" class="shop-setting-link__icon">
+                                        <svg style="fill: #5c6bc0;" viewBox="0 0 32 32">
+                                            <path d="M25 32H7a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4V9a9 9 0 1 1 18 0v3a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4zM23 9A7 7 0 0 0 9 9v3h14V9zm4 7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V16zM16 26a1 1 0 0 1-1-1v-6a1 1 0 1 1 2 0v6a1 1 0 0 1-1 1z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Cài đặt riêng tư<!----></div>
+                                    <div style="background: #5c6bc0;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                        </div>--%>
+                        <%--<div class="card-panel__section">
+                            <div class="card-panel__title">Tài khoản</div>
+                            <div id="ember4577" class="shop-setting-link ember-view">
+                                <a href="<%=GetRouteUrl("gianhang_account",new { }) %>" id="ember4578" class="shop-setting-link__link ember-view">
+                                    <div style="background: #00bfa5;" class="shop-setting-link__icon">
+                                        <svg style="fill: #00bfa5;" viewBox="0 0 32 32">
+                                            <path d="M16 20.8h10.9v-.9H16v.9zm0-2.1h10.9v-.9H16v.9zm0-2h10.9v-.9H16v.9zm0-2h6.6v-.9H16v.9zM29 23c0 .5-.4.9-.9.9H4c-.5.1-1-.4-1-.9V8.2c0-.5.4-.9.9-.9h5.3v2.1h1.9V7.3h4.3v2.1h1.9V7.3h4.5v2.1h1.9V7.3H28c.5 0 .9.4.9.9V23zm0-17.6H3c-1 0-1.9.8-1.9 1.9V24c0 1 .8 1.9 1.9 1.9h26c1 0 1.9-.8 1.9-1.9V7.3c-.1-1-.9-1.9-1.9-1.9z"></path><path d="M13.3 20.8H6.1c-.4-.6-.2-1.8.2-2.3.2-.2 1.6-.6 2.3-.7-.7-.6-1.2-1.6-1.2-2.6 0-1.4.4-2.6 2.3-2.6s2.3 1.2 2.3 2.6c0 1-.4 2-1.2 2.6.7.2 2.1.5 2.3.7.4.5.6 1.7.2 2.3z"></path></svg>
+                                    </div>
+                                    <div class="shop-setting-link__caption">Tài khoản<!----></div>
+                                    <div style="background: #00bfa5;" class="shop-setting-link__active-bar"></div>
+                                </a>
+                            </div>
+                        </div>--%>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col route-settings__main">
+                <asp:ContentPlaceHolder ID="mainboard" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    
+</asp:Content>

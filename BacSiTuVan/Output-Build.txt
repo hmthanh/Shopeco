@@ -1,0 +1,6 @@
+﻿------ Build started: Project: WebNgoKhong(1), Configuration: Debug Any CPU ------
+Warning: Unable to update auto-refresh reference 'itextsharp.dll'. Cannot find assembly 'C:\Users\Admin\Desktop\ExportPDF\Bin\itextsharp.dll'.
+Warning: Unable to update auto-refresh reference 'htmlagilitypack.dll'. Cannot find assembly 'D:\TFS\WebTMDT\BacSiTuVan\WebNgoKhong\packages\HtmlAgilityPack.1.8.7\lib\Net45\HtmlAgilityPack.dll'.
+Validating Web Site
+Building directory '/Assets/js/'.
+Building directory '/Layout/'.

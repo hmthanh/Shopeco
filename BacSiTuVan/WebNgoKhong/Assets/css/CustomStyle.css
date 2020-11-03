@@ -1,0 +1,325 @@
+﻿body {
+    font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif;
+}
+
+.header-top {
+    padding: 10px 0;
+    min-height: 36px;
+    border-bottom: 1px solid #efefef;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+.list-inline {
+    display: inline-block;
+    margin: 0;
+    padding-top: 5px;
+}
+
+/*
+
+ul.top-link > li {
+    float: left;
+    position: relative;
+    list-style: outside none none;
+    padding-right: 0px;
+    margin-left: 0px;
+    padding-left: 20px;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.top-link > li:after {
+    background-color: rgba(250, 250, 250, 0.1);
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+}
+
+ul.top-link > li .btn-group .btn-link {
+    padding: 0;
+    line-height: 36px;
+    border: none;
+    font-size: 13px;
+}
+
+.btn-group .btn-link {
+    text-align: left;
+    background: transparent;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #666;
+    font-weight: normal;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+ul.top-link > li i {
+    padding-right: 5px;
+}
+
+.btn-group .btn-link {
+    text-align: left;
+    background: transparent;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #666;
+    font-weight: normal;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+nav a {
+    display: table-cell;
+    *float: left;
+    width: 75px;
+    height: 44px;
+    padding: 3px 0 4px;
+    color: #000;
+    background: #fed700;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}*/
+
+
+
+.w3-bar {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+a.topnav-icons.fa-menu {
+    font-size: 22px !important;
+}
+
+.w3-bar .w3-bar-item {
+    padding: 8px 16px;
+    width: 110px;
+    display: flex;
+
+    flex-direction:column;
+    outline: 0;
+}
+
+/*a.topnav-icons {
+    width: 52px !important;
+    font-size: 20px !important;
+    padding-top: 11px !important;
+    padding-bottom: 13px !important;
+}*/
+/*.topnav a {
+    padding: 10px 15px 9px 15px !important;
+}*/
+.topnav-icons{
+    text-align: center;
+    color:#23B7E5;
+    font-size: 20px;
+    border-left: 1px solid #ddd;
+
+
+    font-weight: 400;
+    background: #F2F2F2 repeat-x;
+    background-image: -webkit-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+    background-image: -o-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+    background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffececec', GradientType=0);
+}
+
+.topnav-icons > i{
+    display: block;
+    margin: 0 auto;
+}
+
+.topnav-icons > span{
+    display: block;
+    font-size: 14px;
+}
+
+a.topnav-icons:hover{
+    color:#2a6496;
+    font-weight: 600;
+    text-decoration:none;
+    background-color: lightblue;
+    cursor:pointer;
+}
+
+.p-body-header {
+    margin-bottom: 10px;
+}
+
+.p-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: -5px;
+}
+.p-title-value {
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    font-weight: 400;
+    min-width: 0;
+    margin-right: auto;
+}
+.label.label--royalBlue {
+    color: #fff;
+    background: #4169e1;
+    border-color: #214cce;
+}
+.label {
+    display: inline-block;
+    padding: 1px .35em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 80%;
+    line-height: 1.26;
+    text-decoration: none;
+    height: auto !important;
+}
+[dir=auto] {
+    text-align: left;
+}
+.label-append {
+    display: inline-block;
+}
+
+.p-description {
+    margin: 5px 0 0;
+    padding: 0;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+.listInline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.listInline>li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.tagItem {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0 6px 1px;
+    margin: 0 0 2px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #505050;
+    background: #f5f5f5;
+    border: 1px solid #d8d8d8;
+}
+/*Footer*/
+.site-footer {
+    background-color: #f9f9f9;
+    border-top: 2px solid #2a6ebb;
+    font-size: 1em;
+    padding-top: 24px;
+}
+.site-footer .container-fluid {
+    max-width: 1200px;
+}
+.container-constrain {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.site-footer .navigation-group {
+    margin-bottom: 24px;
+}
+.site-footer .navigation-group {
+    margin-bottom: 24px;
+}
+.site-footer h5 {
+    color: #434343;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+.list-unstyled, .list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.site-footer .navigation-group li {
+    margin-bottom: 6px;
+}
+.site-footer h5 {
+    color: #434343;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+.site-footer .legal, .site-footer .legal a {
+    color: #888;
+}
+.site-footer .legal {
+    background-color: #1c1c1c;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.site-footer .container-fluid {
+    max-width: 1200px;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.site-footer .legal .copyright, .site-footer .legal .policies {
+    text-align: center;
+    float: none;
+}
+@media (min-width: 768px)
+.site-footer .legal .policies {
+    float: left;
+}
+
+.site-footer .legal ul {
+    margin: 0;
+}
+.list-inline {
+    margin-left: -5px;
+}
+.list-unstyled, .list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+.site-footer .legal li {
+    padding: 0 0.5em 0 0;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.site-footer .legal, .site-footer .legal a {
+    color: #888;
+}
+
+.site-footer .legal .policies {
+    float: left;
+}
+
+.site-footer .legal .copyright {
+    float: right;
+}

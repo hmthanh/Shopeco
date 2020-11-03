@@ -1,0 +1,266 @@
+﻿/** home secial color themes **/
+/** new PC mall UI guideline **/
+/** BACC **/
+/** home secial color themes **/
+/** new PC mall UI guideline **/
+/** BACC **/
+/** typography related **/
+/** z-index related **/
+/** button related **/
+/** input related **/
+/** badge related **/
+/** dropdown related **/
+/** accordion related **/
+/** checkbox related **/
+/** radio button related **/
+/** motion curve */
+/** box shadow related **/
+/** display card related **/
+/** section header **/
+/** new PC mall guideline **/
+/** path **/
+/* Typography */
+/** to make the background image fill the container with a center-crop non-repeat fashion **/
+/** ratio box's parent must have position relative **/
+/**
+* Make height of a div relative to its width, in a constant ratio.
+* $ratio: ratio of height to with, e.g. 3/4 to get something like 300px height and 400px width
+*/
+/** shapes **/
+/* stylelint-disable selector-no-vendor-prefix */
+/* stylelint-enable */
+/**
+ * displays a circular stamped border
+ * https://codesandbox.io/s/pyw3zzx54m
+ */
+/** home secial color themes **/
+/** new PC mall UI guideline **/
+/** BACC **/
+/** typography related **/
+/** z-index related **/
+/** button related **/
+/** input related **/
+/** badge related **/
+/** dropdown related **/
+/** accordion related **/
+/** checkbox related **/
+/** radio button related **/
+/** motion curve */
+/** box shadow related **/
+/** display card related **/
+/** section header **/
+/** new PC mall guideline **/
+/** path **/
+.Shopee-sort-by-options {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+    .Shopee-sort-by-options .Shopee-dropdown {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+        .Shopee-sort-by-options .Shopee-dropdown .Shopee-popover {
+            width: 100%;
+            padding: 0;
+        }
+
+    .Shopee-sort-by-options .Shopee-dropdown__entry {
+        background-color: white;
+        border: none;
+        padding: 0 1rem;
+        text-transform: uppercase;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .Shopee-sort-by-options .Shopee-dropdown__entry--selected {
+        color: rgba(0, 0, 0, .8);
+        height: 100%;
+    }
+
+        .Shopee-sort-by-options .Shopee-dropdown__entry--selected span {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 auto;
+            -moz-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+
+        .Shopee-sort-by-options .Shopee-dropdown__entry--selected:hover {
+            background-color: rgba(0, 0, 0, .02);
+        }
+
+    .Shopee-sort-by-options .Shopee-dropdown__entry--optional {
+        height: 5rem;
+    }
+
+    .Shopee-sort-by-options .Shopee-dropdown--has-selected .Shopee-dropdown__entry--selected {
+        color: #FF9800;
+        border-bottom: 2px solid #FF9800;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .Shopee-sort-by-options .select-with-status {
+        width: 20rem;
+        margin-left: 1rem;
+    }
+
+    .Shopee-sort-by-options .select-with-status__value, .Shopee-sort-by-options .select-with-status__placeholder, .Shopee-sort-by-options .select-with-status__dropdown-item {
+        text-align: left;
+    }
+
+    .Shopee-sort-by-options .select-with-status__placeholder, .Shopee-sort-by-options .select-with-status__value {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: rgba(0, 0, 0, .8);
+        margin: 0 1rem 0 1.2rem;
+        padding: 0;
+    }
+
+    .Shopee-sort-by-options .select-with-status__value {
+        color: #FF9800;
+    }
+
+    .Shopee-sort-by-options .select-with-status__dropdown {
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, .05);
+        margin: 0;
+        padding: 1rem 0;
+        border: 0;
+    }
+
+    .Shopee-sort-by-options .select-with-status__dropdown-item {
+        padding: 0 1.2rem 0 1.5rem;
+        cursor: pointer;
+    }
+
+        .Shopee-sort-by-options .select-with-status__dropdown-item:hover {
+            background: transparent;
+            color: #FF9800;
+        }
+
+    .Shopee-sort-by-options .select-with-status__holder {
+        margin: 0;
+        background: white;
+    }
+
+.Shopee-sort-by-options__option {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 9rem;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 9rem;
+    flex: 0 0 9rem;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-transform: capitalize;
+    padding: 0 1.5rem;
+    background: white;
+    white-space: nowrap;
+    margin-left: 1rem;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .Shopee-sort-by-options__option:active {
+        background: #fdfdfd;
+        box-shadow: inset 0 0.1rem 0 0 rgba(0, 0, 0, .03);
+    }
+
+.Shopee-sort-by-options__option--selected {
+    color: white !important;
+    background: #FF9800 !important;
+}
+
+    .Shopee-sort-by-options__option--selected:active {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .02);
+    }
+
+.Shopee-sort-by-options__option,
+.Shopee-sort-by-options .select-with-status__holder {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .02);
+    height: 3.4rem;
+    line-height: 3.4rem;
+    border-radius: 2px;
+    border: 0;
+}
+
+    .Shopee-sort-by-options__option:hover,
+    .Shopee-sort-by-options .select-with-status__holder:hover {
+        background: #fdfdfd;
+    }
+
+
+#selectGia
+{
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-color: #fff;
+    /*border: 1px solid #e6e6e6;*/
+    margin-left:10px;
+    border: none;
+    margin-left: 10px;
+    padding: 0 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: none;
+    align-items: center;
+    /*border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-width: 1;*/
+
+}
+.chooseLabel_checked
+{
+    ;
+    
+}

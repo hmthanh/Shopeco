@@ -1,0 +1,138 @@
+﻿#menu_home_v5 {
+    margin: 20px 20px 20px 0;
+    width: 980px;
+}
+.fl {
+    float: left;
+}
+.menu_home_v5_main {
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    width: 979px;
+    overflow: hidden;
+}
+.menu_home_v5_main ul li {
+    border: 1px solid #E5E5E5;
+    display: inline-block;
+    float: left;
+    height: 160px;
+    width: calc(100%/8 - 1px);
+    border-right: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+.mhv_img {
+    padding: 10px 0 0;
+}
+
+.mhv_name {
+    max-width: 110px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.icon_picture {
+    transition: transform .2s linear;
+    -webkit-transition: -webkit-transform .2s linear;
+}
+.icon_picture_sale {
+    background-position: 0 0;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture {
+    background: url(/Content/UI/image/beacon_cat_img.png) no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon_picture:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+}
+.icon_picture_mobile {
+    background-position: 0 -100px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_laptop {
+    background-position: 0 -200px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_electric {
+    background-position: 0 -300px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_camera {
+    background-position: 0 -400px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_car {
+    background-position: 0 -500px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_fashion {
+    background-position: 0 -600px;
+    width: 100px;
+    height: 100px;
+}
+
+.icon_picture_mom {
+    background-position: 0 -700px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_healthy {
+    background-position: 0 -800px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_sh {
+    background-position: 0 -900px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_furniture {
+    background-position: 0 -1000px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_book {
+    background-position: 0 -1100px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_sport {
+    background-position: 0 -1200px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_industry {
+    background-position: 0 -1300px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_game {
+    background-position: 0 -1400px;
+    width: 100px;
+    height: 100px;
+}
+.icon_picture_food {
+    background-position: 0 -1500px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.megamenu .item-vertical:hover{
+    background-color:#ff9800;
+}
+
+.megamenu .item-vertical:hover span, .megamenu .item-vertical:hover i{
+    color: #f3f3f3;
+}
+

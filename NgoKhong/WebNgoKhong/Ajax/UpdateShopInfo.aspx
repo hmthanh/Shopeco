@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UpdateShopInfo.aspx.cs" Inherits="Ajax_UpdateShopInfo" %>

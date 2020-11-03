@@ -1,0 +1,391 @@
+﻿@font-face {
+  font-family: Flaticon;
+  src: url(https://static.vatgia.com/20181231/cache/css/flaticon/Flaticon.woff);
+}
+
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.inner img {
+    position: absolute;
+    width: 40px;
+}
+.info-cont {
+    padding-left: 45px;
+}
+.bottom-cont a img{
+    width:48px;
+}
+.bottom-cont a {
+    padding-right: 30px;
+}
+
+
+
+
+.fi:before {
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.flaticon-comment:before {
+    content: "\f100";
+}
+
+.flaticon-book:before {
+    content: "\f101";
+}
+
+.flaticon-list-view:before {
+    content: "\f102";
+}
+
+.flaticon-question-2:before {
+    content: "\f103";
+}
+
+.flaticon-pencil:before {
+    content: "\f104";
+}
+
+.flaticon-check:before {
+    content: "\f105";
+}
+
+.flaticon-eye-outline:before {
+    content: "\f106";
+}
+
+.flaticon-shield-plus:before {
+    content: "\f107";
+}
+
+.flaticon-search:before {
+    content: "\f108";
+}
+
+.flaticon-camera-outline:before {
+    content: "\f109";
+}
+
+.flaticon-interface:before {
+    content: "\f10a";
+}
+
+.flaticon-bicycle:before {
+    content: "\f10b";
+}
+
+.flaticon-list:before {
+    content: "\f10c";
+}
+
+.flaticon-cook:before {
+    content: "\f10d";
+}
+
+.flaticon-building:before {
+    content: "\f10e";
+}
+
+.flaticon-like:before {
+    content: "\f10f";
+}
+
+.flaticon-block-eye:before {
+    content: "\f110";
+}
+
+.flaticon-car:before {
+    content: "\f111";
+}
+
+.flaticon-hand-shake:before {
+    content: "\f112";
+}
+
+.flaticon-suitcase:before {
+    content: "\f113";
+}
+
+.flaticon-list-gird:before {
+    content: "\f114";
+}
+
+.flaticon-flight:before {
+    content: "\f115";
+}
+
+.flaticon-voucher:before {
+    content: "\f116";
+}
+
+.flaticon-speaker-2:before {
+    content: "\f117";
+}
+
+.flaticon-question:before {
+    content: "\f118";
+}
+
+.flaticon-marketing:before {
+    content: "\f119";
+}
+
+.flaticon-circle-plus:before {
+    content: "\f11a";
+}
+
+.flaticon-edit:before {
+    content: "\f11b";
+}
+
+.flaticon-baby:before {
+    content: "\f11c";
+}
+
+.flaticon-listing-view:before {
+    content: "\f11d";
+}
+
+.flaticon-camera:before {
+    content: "\f11e";
+}
+
+.flaticon-fire:before {
+    content: "\f11f";
+}
+
+.flaticon-screen:before {
+    content: "\f120";
+}
+
+.flaticon-tool:before {
+    content: "\f121";
+}
+
+.flaticon-list-2:before {
+    content: "\f122";
+}
+
+.flaticon-double-arrow-down:before {
+    content: "\f123";
+}
+
+.flaticon-twitter:before {
+    content: "\f124";
+}
+
+.flaticon-discount-tag:before {
+    content: "\f125";
+}
+
+.flaticon-cell-phone:before {
+    content: "\f126";
+}
+
+.flaticon-store:before {
+    content: "\f127";
+}
+
+.flaticon-facebook:before {
+    content: "\f128";
+}
+
+.flaticon-cart:before {
+    content: "\f129";
+}
+
+.flaticon-global-travel:before {
+    content: "\f12a";
+}
+
+.flaticon-world-location:before {
+    content: "\f12b";
+}
+
+.flaticon-global:before {
+    content: "\f12c";
+}
+
+.flaticon-ggplus:before {
+    content: "\f12d";
+}
+
+.flaticon-clock-circular-outline:before {
+    content: "\f12e";
+}
+
+.flaticon-laptop:before {
+    content: "\f12f";
+}
+
+.flaticon-chair:before {
+    content: "\f130";
+}
+
+.flaticon-gift:before {
+    content: "\f131";
+}
+
+.flaticon-mini-arrow-down:before {
+    content: "\f132";
+}
+
+.flaticon-user-plus:before {
+    content: "\f133";
+}
+
+.flaticon-cloud-upload:before {
+    content: "\f134";
+}
+
+.flaticon-call:before {
+    content: "\f135";
+}
+
+.flaticon-three-dots:before {
+    content: "\f136";
+}
+
+.flaticon-lipstick:before {
+    content: "\f137";
+}
+
+.flaticon-check-form:before {
+    content: "\f138";
+}
+
+.flaticon-shield-check:before {
+    content: "\f139";
+}
+
+.flaticon-cup:before {
+    content: "\f13a";
+}
+
+.flaticon-arrow-down:before {
+    content: "\f13b";
+}
+
+.flaticon-arrow-up:before {
+    content: "\f13c";
+}
+
+.flaticon-user:before {
+    content: "\f13d";
+}
+
+.flaticon-like-outline:before {
+    content: "\f13e";
+}
+
+.flaticon-shirt:before {
+    content: "\f13f";
+}
+
+.flaticon-wallet:before {
+    content: "\f140";
+}
+
+.flaticon-mail:before {
+    content: "\f141";
+}
+
+.flaticon-diamond:before {
+    content: "\f142";
+}
+
+.flaticon-clock:before {
+    content: "\f143";
+}
+
+.flaticon-calendar:before {
+    content: "\f144";
+}
+
+.flaticon-star:before {
+    content: "\f145";
+}
+
+.flaticon-map-marker:before {
+    content: "\f146";
+}
+
+.flaticon-console:before {
+    content: "\f147";
+}
+
+.flaticon-call-answer:before {
+    content: "\f148";
+}
+
+.flaticon-wrench:before {
+    content: "\f149";
+}
+
+.flaticon-family:before {
+    content: "\f14a";
+}
+
+.flaticon-medicine:before {
+    content: "\f14b";
+}
+
+.flaticon-makeup:before {
+    content: "\f14c";
+}
+
+.flaticon-tshirt:before {
+    content: "\f14d";
+}
+
+.flaticon-television:before {
+    content: "\f14e";
+}
+
+.flaticon-computer-screen:before {
+    content: "\f14f";
+}
+
+.flaticon-oto:before {
+    content: "\f150";
+}
+
+.flaticon-apple:before {
+    content: "\f151";
+}
+
+.flaticon-video-camera:before {
+    content: "\f152";
+}
+
+.flaticon-house:before {
+    content: "\f153";
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-size: 18px !important;/*inherit !important;*/
+    font-style: normal !important;
+    margin-left: inherit !important;
+}
+
+.megamenu i {
+    padding-right: 20px;
+}
